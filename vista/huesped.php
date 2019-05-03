@@ -7,7 +7,7 @@ require 'header.php';
     <div class="row card-deck mb-12" id="listadoregistros">
         <div class="card mb-12">
             <div class="card-header">
-                <h4 class="my-0 font-weight-normal">Huésped
+                <h4 class="my-0 font-weight-normal" style="font-family: 'Acme', sans-serif;">Huéspedes
                     <button type="button" class="btn btn-success btn-sm" id="btnagregar"
                             onclick="mostrarform(true)"><i
                             class="fa fa-plus-circle"></i> Agregar
@@ -37,7 +37,7 @@ require 'header.php';
     <div class="row card-deck mb-12" id="formularioregistros">
         <div class="card mb-12">
             <div class="card-header">
-                <h4 class="my-0 font-weight-normal">Nuevo Huésped</h4>
+                <h4 class="my-0 font-weight-normal" style="font-family: 'Acme', sans-serif;">Nuevo Huésped</h4>
                 <br>
                 <div class="needs-validation">
                     <form name="formulario" id="formulario" method="POST">

@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efda2fab-e383-440e-b2e6-dacc9ca865d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controlador/huesped.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modelo/Huesped.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vista/huesped.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vista/librerias/huesped.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/47e1f50e-68fa-419e-b38a-dfe7ba51128a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/47e1f50e-68fa-419e-b38a-dfe7ba51128a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modelo/Habitacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/modelo/Habitacion.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vista/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/header.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,7 +48,21 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vista/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#b#0;n#h4#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#small#0;n#h4#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -158,10 +164,11 @@
         <option value="$PROJECT_DIR$/vista/footer.php" />
         <option value="$PROJECT_DIR$/modelo/Habitacion.php" />
         <option value="$PROJECT_DIR$/vista/huesped.php" />
-        <option value="$PROJECT_DIR$/vista/header.php" />
         <option value="$PROJECT_DIR$/vista/librerias/huesped.js" />
         <option value="$PROJECT_DIR$/modelo/Huesped.php" />
         <option value="$PROJECT_DIR$/controlador/huesped.php" />
+        <option value="$PROJECT_DIR$/vista/librerias/habitacion.js" />
+        <option value="$PROJECT_DIR$/vista/header.php" />
       </list>
     </option>
   </component>
@@ -194,23 +201,7 @@
             <path>
               <item name="corte3" type="b2602c69:ProjectViewProjectNode" />
               <item name="corte3" type="462c0819:PsiDirectoryNode" />
-              <item name="controlador" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="corte3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="corte3" type="462c0819:PsiDirectoryNode" />
-              <item name="modelo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="corte3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="corte3" type="462c0819:PsiDirectoryNode" />
               <item name="vista" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="corte3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="corte3" type="462c0819:PsiDirectoryNode" />
-              <item name="vista" type="462c0819:PsiDirectoryNode" />
-              <item name="librerias" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -290,19 +281,19 @@
       <workItem from="1555994100517" duration="1084000" />
       <workItem from="1556729509798" duration="14645000" />
       <workItem from="1556799014573" duration="32906000" />
-      <workItem from="1556849379010" duration="5037000" />
+      <workItem from="1556849379010" duration="6246000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58624000" />
+    <option name="totallyTimeSpent" value="59833000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="735" extended-state="6" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.20619336" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.20619336" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -315,11 +306,11 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32899022" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="12" side_tool="true" visible="true" weight="0.32899022" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32899022" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.32930514" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32930514" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" weight="0.2031722" />
@@ -471,28 +462,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vista/librerias/habitacion.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="89" column="23" selection-end-line="120" selection-end-column="7" />
-          <folding>
-            <element signature="n#!!block;n#init#0" />
-            <element signature="n#!!block;n#limpiar#0" />
-            <element signature="n#!!block;n#cancelarform#0" />
-            <element signature="n#!!block;n#listar#0" />
-            <element signature="n#!!block;n#guardaryeditar#0" />
-            <element signature="n#!!block;n#eliminar#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vista/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controlador/conexion/Conexion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -518,6 +487,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
           <caret line="97" column="40" selection-start-line="97" selection-start-column="39" selection-end-line="97" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/librerias/habitacion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="97" column="34" lean-forward="true" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!block;n#init#0" />
+            <element signature="n#!!block;n#limpiar#0" />
+            <element signature="n#!!block;n#cancelarform#0" />
+            <element signature="n#!!block;n#listar#0" />
+            <element signature="n#!!block;n#guardaryeditar#0" />
+            <element signature="n#!!block;n#eliminar#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#b#0;n#h4#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#0;n#h4#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -7,7 +7,7 @@ require 'header.php';
     <div class="row card-deck mb-12" id="listadoregistros">
         <div class="card mb-12">
             <div class="card-header">
-                <h4 class="my-0 font-weight-normal">Habitación
+                <h4 class="my-0 font-weight-normal" style="font-family: 'Acme', sans-serif;">Habitaciones
                     <button type="button" class="btn btn-success btn-sm" id="btnagregar"
                             onclick="mostrarform(true)"><i
                                 class="fa fa-plus-circle"></i> Agregar
@@ -38,7 +38,7 @@ require 'header.php';
     <div class="row card-deck mb-12" id="formularioregistros">
         <div class="card mb-12">
             <div class="card-header">
-                <h4 class="my-0 font-weight-normal">Nueva Habitación</h4>
+                <h4 class="my-0 font-weight-normal" style="font-family: 'Acme', sans-serif;">Nueva Habitación</h4>
                 <br>
                 <div class="needs-validation">
                     <form name="formulario" id="formulario" method="POST">
@@ -46,7 +46,8 @@ require 'header.php';
                             <div class="col-md-4 mb-3">
                                 <label>Número</label>
                                 <input type="hidden" name="idhabitacion" id="idhabitacion">
-                                <input type="text" class="form-control" name="numero" maxlength="10" id="numero" placeholder=""
+                                <input type="text" class="form-control" name="numero" maxlength="10" id="numero"
+                                       placeholder=""
                                        value="" required>
                             </div>
                             <div class="col-md-4 mb-3">
