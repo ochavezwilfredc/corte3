@@ -61,7 +61,9 @@ class Habitacion
 
     public function mostrar($idhabitacion)
     {
-        $sql = "SELECT * FROM habitacion WHERE idhabitacion='$idhabitacion'";
+        $sql = "SELECT * 
+                    FROM habitacion 
+                    WHERE idhabitacion='$idhabitacion'";
         return ejecutarConsultaSimpleFila($sql);
     }
 
@@ -197,14 +199,14 @@ class Habitacion
     public function __toString()
     {
         // TODO: Implement __toString() method.
-        $ha = "num: " . $this->getNumero() . "\n" .
+        $aux = "num: " . $this->getNumero() . "\n" .
             "piso: " . $this->getPiso() . "\n" .
             "max_per: " . $this->getMaxPersonas() . "\n" .
             "costo: " . $this->getCosto() .
             "bebe: " . $this->getTieneCamaBebe() . "\n" .
             "desc: " . $this->getDescripcion() . "\n" .
             "id: " . $this->getIdhabitacion();
-        return $ha;
+        return $aux;
 
 
     }

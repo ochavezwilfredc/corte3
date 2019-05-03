@@ -10,14 +10,12 @@ function init() {
 }
 
 function limpiar() {
-    $("#idhabitacion").val("");
-    $("#numero").val("");
-    $("#piso").val("");
-    $("#max_personas").val("");
-    $("#costo").val("");
-    $("#tiene_cama_bebe").val("");
-    $("#descripcion").val("");
-
+    $("#idhuesped").val("");
+    $("#nombre").val("");
+    $("#cedula").val("");
+    $("#telefono").val("");
+    $("#email").val("");
+    $("#direccion").val("");
 }
 
 function mostrarform(flag) {
@@ -48,7 +46,7 @@ function listar() {
             // 'copy', 'excel', 'pdf'
         ],
         "ajax": {
-            url: '../controlador/habitacion.php?opc=listar',
+            url: '../controlador/huesped.php?opc=listar',
             type: "get",
             dataType: "json",
             error: function (e) {
@@ -72,7 +70,7 @@ function guardaryeditar(e) {
     var formData = new FormData($("#formulario")[0]); // aca recibe todos los datos del formulario
 
     $.ajax({
-        url: "../controlador/habitacion.php?opc=guardaroeditar",
+        url: "../controlador/huesped.php?opc=guardaroeditar",
         type: "POST",
         data: formData,
         contentType: false,
@@ -87,29 +85,26 @@ function guardaryeditar(e) {
     limpiar();
 }
 
-// DOC: https://www.w3schools.com/jquery/ajax_post.asp
-function mostrar(idhabitacion) {
-    $.post("../controlador/habitacion.php?opc=mostrar", {idhabitacion: idhabitacion}, function (data, status)
+function mostrar(idhuesped) {
+    $.post("../controlador/huesped.php?opc=mostrar", {idhuesped: idhuesped}, function (data, status)
     {
         data = JSON.parse(data);
-        // console.log(data.toString());
         mostrarform(true);
-        $("#numero").val(data.numero);
-        $("#piso").val(data.piso);
-        $("#max_personas").val(data.max_personas);
-        $("#costo").val(data.costo);
-        $("#tiene_cama_bebe").val(data.tiene_cama_bebe);
-        $("#descripcion").val(data.descripcion);
-        $("#idhabitacion").val(data.idhabitacion);
+        $("#nombre").val(data.nombre);
+        $("#cedula").val(data.cedula);
+        $("#telefono").val(data.telefono);
+        $("#email").val(data.email);
+        $("#direccion").val(data.direccion);
+        $("#idhuesped").val(data.idhuesped);
 
     })
 }
 
-function eliminar(idhabitacion) {
+function eliminar(idhuesped) {
     bootbox.confirm("¿Está seguro de eliminar la habitación?", function (result) {
         if (result) {
-            $.post("../controlador/habitacion.php?opc=eliminar", {
-                idhabitacion: idhabitacion
+            $.post("../controlador/huesped.php?opc=eliminar", {
+                idhuesped: idhuesped
             }, function (e) {
                 bootbox.alert(e);
                 tabla.ajax.reload();

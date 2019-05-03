@@ -1013,7 +1013,7 @@
     </column>
     <column id="256" parent="249" name="costo">
       <Position>5</Position>
-      <DataType>decimal(6,2 digit)|0s</DataType>
+      <DataType>decimal(12,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -1028,104 +1028,126 @@
       <DataType>tinytext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="259" parent="249" name="PRIMARY">
+    <index id="259" parent="249" name="numero_UNIQUE">
+      <ColNames>numero</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="260" parent="249" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idhabitacion</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="260" parent="250" name="idhuesped">
+    <key id="261" parent="249" name="numero_UNIQUE">
+      <ColNames>numero</ColNames>
+      <UnderlyingIndexName>numero_UNIQUE</UnderlyingIndexName>
+    </key>
+    <column id="262" parent="250" name="idhuesped">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="250" name="nombre">
+    <column id="263" parent="250" name="nombre">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="250" name="telefono">
+    <column id="264" parent="250" name="cedula">
       <Position>3</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="265" parent="250" name="telefono">
+      <Position>4</Position>
       <DataType>varchar(15)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="250" name="email">
-      <Position>4</Position>
+    <column id="266" parent="250" name="email">
+      <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="250" name="direccion">
-      <Position>5</Position>
+    <column id="267" parent="250" name="direccion">
+      <Position>6</Position>
       <DataType>tinytext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="265" parent="250" name="PRIMARY">
+    <index id="268" parent="250" name="cedula_UNIQUE">
+      <ColNames>cedula</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="269" parent="250" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idhuesped</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="266" parent="251" name="idreserva">
+    <key id="270" parent="250" name="cedula_UNIQUE">
+      <ColNames>cedula</ColNames>
+      <UnderlyingIndexName>cedula_UNIQUE</UnderlyingIndexName>
+    </key>
+    <column id="271" parent="251" name="idreserva">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="251" name="fecha_inicio">
+    <column id="272" parent="251" name="fecha_inicio">
       <Position>2</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="268" parent="251" name="fecha_fin">
+    <column id="273" parent="251" name="fecha_fin">
       <Position>3</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="269" parent="251" name="estado">
+    <column id="274" parent="251" name="estado">
       <Position>4</Position>
       <DataType>tinyint(4)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="270" parent="251" name="comentario">
+    <column id="275" parent="251" name="comentario">
       <Position>5</Position>
-      <DataType>text|0s</DataType>
+      <DataType>tinytext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="271" parent="251" name="idhabitacion">
+    <column id="276" parent="251" name="idhabitacion">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="272" parent="251" name="idhuesped">
+    <column id="277" parent="251" name="idhuesped">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="273" parent="251" name="fk_reserva_habitacion">
+    <index id="278" parent="251" name="fk_reserva_habitacion_id">
       <ColNames>idhabitacion</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="274" parent="251" name="fk_reserva_huesped1">
+    <index id="279" parent="251" name="fk_reserva_huesped_id">
       <ColNames>idhuesped</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="275" parent="251" name="PRIMARY">
+    <key id="280" parent="251" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>idreserva
-idhabitacion
-idhuesped</ColNames>
+      <ColNames>idreserva</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="276" parent="251" name="fk_reserva_habitacion">
+    <foreign-key id="281" parent="251" name="fk_reserva_habitacion">
       <ColNames>idhabitacion</ColNames>
       <RefSchemaName>dbcorte3adi</RefSchemaName>
       <RefTableName>habitacion</RefTableName>
@@ -1133,7 +1155,7 @@ idhuesped</ColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="277" parent="251" name="fk_reserva_huesped1">
+    <foreign-key id="282" parent="251" name="fk_reserva_huesped">
       <ColNames>idhuesped</ColNames>
       <RefSchemaName>dbcorte3adi</RefSchemaName>
       <RefTableName>huesped</RefTableName>
