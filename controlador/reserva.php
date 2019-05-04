@@ -14,7 +14,7 @@ switch ($_GET["opc"]) {
     case 'guardaroeditar':
         if (empty($idreserva)) {
             $reservas = $reserva->insertar();
-            echo $reservas ? "reserva resistrada correctamente" : "No se pudo resistrar la reserva";
+            echo $reservas ? "Reserva resistrada correctamente" : "No se pudo resistrar la reserva";
         } else {
 //            $reserva->setIdreserva($idreserva);
 //            $reservas = $reserva->editar();
@@ -24,7 +24,7 @@ switch ($_GET["opc"]) {
 
     case 'anular':
         $reservas = $reserva->anular($idreserva);
-        echo $reservas ? "reserva anulada correctamente" : "No se pudo anular la reserva";
+        echo $reservas ? "Reserva anulada correctamente" : "No se pudo anular la reserva";
         break;
 
     case 'mostrar':
@@ -49,34 +49,6 @@ switch ($_GET["opc"]) {
                 "8" => ($res->estado == '1') ? '<button class="btn btn-sm" onclick="mostrar(' . $res->idreserva . ')"><i class="fas fa-eye"></i></button>' .
                     ' <button class="btn btn-sm" onclick="anular(' . $res->idreserva . ')"><i class="fas fa-window-close"></i></button>' :
                     '<button class="btn btn-sm" onclick="mostrar(' . $res->idreserva . ')"><i class="fas fa-eye"></i></button>',
-            );
-        }
-        $results = array(
-            "sEcho" => 1, //Información para el datatables
-            "iTotalRecords" => count($data), //enviamos el total resistros al datatable
-            "iTotalDisplayRecords" => count($data), //enviamos el total resistros a visualizar
-            "aaData" => $data);
-        echo json_encode($results);
-        break;
-
-    case 'listarHabitaciones':
-        require_once "../modelo/Habitacion.php";
-        $habitacion = new Habitacion();
-        $habitaciones = $habitacion->listar();
-
-        $data = Array();
-        while ($hab = $habitaciones->fetch_object()) {
-            $data[] = array(
-                "0" => $hab->numero,
-                "1" => $hab->piso,
-                "2" => $hab->max_personas,
-                "3" => $hab->costo,
-                "4" => $hab->tiene_cama_bebe,
-                "5" => $hab->descripcion,
-                "6" => '
-                <div class="text-center"> 
-                    <button class="btn btn-sm"  onclick="agresarDetalleHab(' . $hab->idhabitacion . ')"><span class="fas fa-plus"></span></button>
-                </div>',
             );
         }
         $results = array(

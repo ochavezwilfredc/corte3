@@ -45,7 +45,7 @@ class Huesped
         $this->direccion = $direccion;
     }
 
-    public function alistar()
+    public function listar()
     {
         $sql = "SELECT * FROM huesped";
         return ejecutarConsulta($sql);

@@ -111,6 +111,7 @@ function guardaryeditar(e) {
 }
 
 function mostrar(idreserva) {
+    console.log(idreserva);
     $.post("../controlador/reserva.php?opc=mostrar", {idreserva: idreserva}, function (data, status) {
         data = JSON.parse(data);
         mostrarform(true);
@@ -118,11 +119,21 @@ function mostrar(idreserva) {
         $("#idreserva").val(data.idreserva);
         $("#idhabitacion").val(data.idhabitacion);
         $("#idhabitacion").selectpicker('refresh');
+        $("#idhabitacion").prop('disabled', true);
+
         $("#fecha_inicio").val(data.fecha_inicio);
+        $("#fecha_inicio").prop('disabled', true);
+
         $("#fecha_fin").val(data.fecha_fin);
+        $("#fecha_fin").prop('disabled', true);
+
         $("#comentario").val(data.comentario);
+        $("#comentario").prop('disabled', true);
+
         $("#idhuesped").val(data.idhuesped);
         $("#idhuesped").selectpicker('refresh');
+        $("#idhuesped").prop('disabled', true);
+
 
         //Ocultar y mostrar los botones
         $("#btnGuardar").hide();
