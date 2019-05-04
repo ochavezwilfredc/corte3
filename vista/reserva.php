@@ -7,7 +7,7 @@ require 'header.php';
     <div class="row card-deck mb-12" id="listadoregistros">
         <div class="card mb-12">
             <div class="card-header">
-                <h4 class="my-0 font-weight-normal titulo">Huéspedes
+                <h4 class="my-0 font-weight-normal titulo">Reservas
                     <button type="button" class="btn btn-success btn-sm" id="btnagregar"
                             onclick="mostrarform(true)"><i
                                 class="fa fa-plus-circle"></i> Agregar
@@ -19,10 +19,13 @@ require 'header.php';
                         <thead>
                         <tr>
                             <th>Nombre</th>
-                            <th>Cédula</th>
                             <th>Teléfono</th>
-                            <th>Email</th>
-                            <th>Dirección</th>
+                            <th>Fecha Inicio</th>
+                            <th>Fecha Fin</th>
+                            <th>Número de Habitación</th>
+                            <th>Costo</th>
+                            <th>Comentario</th>
+                            <th>Estado</th>
                             <th>Opciones</th>
                         </tr>
                         </thead>
@@ -34,50 +37,49 @@ require 'header.php';
             </div>
         </div>
     </div>
+
     <div class="row card-deck mb-12" id="formularioregistros">
         <div class="card mb-12">
             <div class="card-header">
-                <h4 class="my-0 font-weight-normal titulo">Nuevo Huésped</h4>
+                <h4 class="my-0 font-weight-normal titulo">Nueva Reserva</h4>
                 <br>
                 <div class="needs-validation">
                     <form name="formulario" id="formulario" method="POST">
                         <div class="row">
-                            <div class="col-md-4 mb-3">
-                                <label>Nombre</label>
-                                <input type="hidden" name="idhuesped" id="idhuesped">
-                                <input type="text" class="form-control" name="nombre" maxlength="100" id="nombre"
-                                       placeholder=""
-                                       value="" required>
+                            <div class="col-4 mb-3">
+                                <label>Huésped</label>
+                                <input type="hidden" name="idreserva" id="idreserva">
+                                <select id="idhuesped" name="idhuesped" class="form-control selectpicker"
+                                        data-live-search="true" data-style="btn-info" required>
+                                </select>
+
                             </div>
-                            <div class="col-md-4 mb-3">
-                                <label>Cédula</label>
-                                <input type="text" class="form-control" maxlength="10" name="cedula" id="cedula"
-                                       placeholder="" value=""
-                                       required>
+                            <div class="col-4 mb-3">
+                                <label>Fecha Inicio</label>
+                                <input type="text" class="form-control" name="fecha_inicio" id="fecha_inicio" required>
                             </div>
-                            <div class="col-md-4 mb-3">
-                                <label>Teléfono</label>
-                                <input type="text" class="form-control" maxlength="15" name="telefono" id="telefono"
-                                       placeholder="" value="" required>
+                            <div class="col-4 mb-3">
+                                <label>Fecha Fin</label>
+                                <input type="text" class="form-control" name="fecha_fin" id="fecha_fin" required>
                             </div>
                         </div>
+
                         <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label>Email</label>
-                                <input type="email" class="form-control" maxlength="50" name="email" id="email"
-                                       placeholder=""
-                                       value="" required>
+                            <div class="col-4 mb-3">
+                                <label>Habitación</label>
+                                <select id="idhabitacion" name="idhabitacion" class="form-control selectpicker"
+                                        data-live-search="true" data-style="btn-info" required>
+                                </select>
+
+                            </div>
+                            <div class="col-8 mb-3">
+                                <label>Comentario</label>
+                                <input type="text" class="form-control" name="comentario" id="comentario" required>
                             </div>
 
-                            <div class="col-md-6 mb-3">
-                                <label>Dirección</label>
-                                <input type="text" class="form-control" name="direccion" id="direccion"
-                                       placeholder="" value="">
-                            </div>
                         </div>
-
-
-                        <div class="col-md-12 mb-3">
+                        <br>
+                        <div class="col-12 mb-3">
                             <button class="btn btn-primary btn-sm" type="submit" id="btnGuardar"><i
                                         class="fa fa-save"></i>
                                 Guardar
@@ -97,4 +99,4 @@ require 'header.php';
 <?php
 require 'footer.php';
 ?>
-<script src="librerias/huesped.js"></script>
+<script src="librerias/reserva.js"></script>

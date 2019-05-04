@@ -2,7 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efda2fab-e383-440e-b2e6-dacc9ca865d2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/controlador/reserva.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelo/Reserva.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursos/css/bootstrap-datetimepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursos/css/datepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursos/css/estilos.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursos/js/bootstrap-datetimepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vista/librerias/reserva.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vista/reserva.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelo/Habitacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/modelo/Habitacion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelo/Huesped.php" beforeDir="false" afterPath="$PROJECT_DIR$/modelo/Huesped.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/habitacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/habitacion.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vista/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/huesped.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/huesped.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,20 +60,59 @@
         <item name="dbcorte3adi: schema" type="ebfa3cd1:MariaImplModel$Schema" />
         <item name="huesped: table" type="dbc44a63:MariaImplModel$Table" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="dbcorte3adi: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="reserva: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vista/header.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vista/reserva.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-              <folding>
-                <element signature="n#style#0;n#b#0;n#h4#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#small#0;n#h4#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="128">
+              <caret line="51" column="53" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vista/librerias/reserva.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="121" column="44" lean-forward="true" selection-start-line="121" selection-start-column="44" selection-end-line="121" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controlador/reserva.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-109">
+              <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modelo/Reserva.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="134" column="25" selection-start-line="134" selection-start-column="24" selection-end-line="134" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/47e1f50e-68fa-419e-b38a-dfe7ba51128a/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="14" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -67,30 +122,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>public</find>
-      <find>$reg</find>
-      <find>$rspta</find>
-      <find>firstName</find>
-      <find>lastName</find>
-      <find>$categoria</find>
-      <find>idcategoria</find>
-      <find>$this-&gt;conexion-&gt;</find>
-      <find>$conn-&gt;</find>
-      <find>&quot; .</find>
-      <find>'.</find>
-      <find>.'</find>
-      <find>']</find>
-      <find>Categoría</find>
-      <find>$idcategoria</find>
-      <find>categoria</find>
-      <find>nombre</find>
-      <find>$ha</find>
       <find>idhabitacion</find>
       <find>$idhabitacion</find>
       <find>numero</find>
@@ -103,16 +141,26 @@
       <find>habitacion</find>
       <find>tiene_cama_bebe</find>
       <find>`</find>
+      <find>categoria</find>
+      <find>idproveedor</find>
+      <find>impuesto</find>
+      <find>rspta</find>
+      <find>reg</find>
+      <find>Articulo</find>
+      <find>$articulo</find>
+      <find>huesped</find>
+      <find>proveedor</find>
+      <find>cedula</find>
+      <find>col-md-12 mb-3</find>
+      <find>mb-3</find>
+      <find>op</find>
+      <find>idpersona</find>
+      <find>ingreso</find>
+      <find>tbllistado</find>
+      <find>formatofecha</find>
+      <find>anular</find>
     </findStrings>
     <replaceStrings>
-      <replace>recursos</replace>
-      <replace>$hab</replace>
-      <replace>$habitaciones</replace>
-      <replace>idhabitación</replace>
-      <replace>piso</replace>
-      <replace>$habitacion</replace>
-      <replace>idhabitacion</replace>
-      <replace>$habitación</replace>
       <replace>$idhabitación</replace>
       <replace>habitación</replace>
       <replace>idehabitacion</replace>
@@ -122,7 +170,6 @@
       <replace>habitacion</replace>
       <replace>numero</replace>
       <replace>$aux</replace>
-      <replace>idhuesped</replace>
       <replace>$idhuesped</replace>
       <replace>nombre</replace>
       <replace>Huésped</replace>
@@ -132,6 +179,18 @@
       <replace>email</replace>
       <replace>huesped</replace>
       <replace>direccion</replace>
+      <replace>idhuesped</replace>
+      <replace>reservas</replace>
+      <replace>res</replace>
+      <replace>Habitacion</replace>
+      <replace>$habitacion</replace>
+      <replace>huesper</replace>
+      <replace>fecha_inicio</replace>
+      <replace>col-</replace>
+      <replace>opc</replace>
+      <replace>idhabitacion</replace>
+      <replace>reserva</replace>
+      <replace>formato_imputs</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -158,17 +217,26 @@
         <option value="$PROJECT_DIR$/controlador/conexion/Conexion.php" />
         <option value="$PROJECT_DIR$/controlador/conexion/global.php" />
         <option value="$PROJECT_DIR$/controlador/test.php" />
-        <option value="$PROJECT_DIR$/vista/habitacion.php" />
         <option value="$PROJECT_DIR$/vista/scripts/habitacion.js" />
-        <option value="$PROJECT_DIR$/controlador/habitacion.php" />
-        <option value="$PROJECT_DIR$/vista/footer.php" />
-        <option value="$PROJECT_DIR$/modelo/Habitacion.php" />
-        <option value="$PROJECT_DIR$/vista/huesped.php" />
         <option value="$PROJECT_DIR$/vista/librerias/huesped.js" />
-        <option value="$PROJECT_DIR$/modelo/Huesped.php" />
         <option value="$PROJECT_DIR$/controlador/huesped.php" />
         <option value="$PROJECT_DIR$/vista/librerias/habitacion.js" />
+        <option value="$PROJECT_DIR$/recursos/css/estilos.css" />
+        <option value="$PROJECT_DIR$/vista/habitacion.php" />
+        <option value="$PROJECT_DIR$/vista/huesped.php" />
+        <option value="$PROJECT_DIR$/test.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/47e1f50e-68fa-419e-b38a-dfe7ba51128a/console_1.sql" />
+        <option value="$PROJECT_DIR$/controlador/habitacion.php" />
+        <option value="$PROJECT_DIR$/test.js" />
         <option value="$PROJECT_DIR$/vista/header.php" />
+        <option value="$PROJECT_DIR$/vista/reserva.php" />
+        <option value="$PROJECT_DIR$/modelo/Habitacion.php" />
+        <option value="$PROJECT_DIR$/vista/footer.php" />
+        <option value="$PROJECT_DIR$/controlador/reserva.php" />
+        <option value="$PROJECT_DIR$/modelo/Huesped.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/47e1f50e-68fa-419e-b38a-dfe7ba51128a/console.sql" />
+        <option value="$PROJECT_DIR$/modelo/Reserva.php" />
+        <option value="$PROJECT_DIR$/vista/librerias/reserva.js" />
       </list>
     </option>
   </component>
@@ -179,9 +247,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="php_installation_7" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="778" />
-    <option name="height" value="631" />
+    <option name="x" value="42" />
+    <option name="y" value="48" />
+    <option name="width" value="768" />
+    <option name="height" value="629" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -191,6 +260,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -201,20 +271,32 @@
             <path>
               <item name="corte3" type="b2602c69:ProjectViewProjectNode" />
               <item name="corte3" type="462c0819:PsiDirectoryNode" />
+              <item name="controlador" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="corte3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="corte3" type="462c0819:PsiDirectoryNode" />
               <item name="vista" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="corte3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="corte3" type="462c0819:PsiDirectoryNode" />
+              <item name="vista" type="462c0819:PsiDirectoryNode" />
+              <item name="librerias" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mariadb&#10;mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/recursos/css" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -223,13 +305,15 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/recursos" />
       <recent name="$PROJECT_DIR$/controlador/conexion" />
       <recent name="$PROJECT_DIR$/recursos/plugins" />
       <recent name="$PROJECT_DIR$/modelo" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/controlador" />
+      <recent name="$PROJECT_DIR$/recursos/css" />
       <recent name="$PROJECT_DIR$/recursos/js" />
+      <recent name="$PROJECT_DIR$/controlador" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/recursos" />
     </key>
@@ -281,19 +365,23 @@
       <workItem from="1555994100517" duration="1084000" />
       <workItem from="1556729509798" duration="14645000" />
       <workItem from="1556799014573" duration="32906000" />
-      <workItem from="1556849379010" duration="6246000" />
+      <workItem from="1556849379010" duration="6535000" />
+      <workItem from="1556888164117" duration="4463000" />
+      <workItem from="1556921448539" duration="10200000" />
+      <workItem from="1556972079832" duration="12610000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59833000" />
+    <option name="totallyTimeSpent" value="87395000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="735" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.20619336" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.23036253" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -302,20 +390,21 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32899022" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32899022" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" weight="0.32930514" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2031722" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.23036253" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -324,15 +413,16 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32899022" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32899022" />
+      <window_info active="true" anchor="bottom" id="Database Console" order="13" visible="true" weight="0.32899022" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.32930514" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32930514" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,21 +438,8 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1bba51f9-6c3d-44b8-b602-bd61f338c456/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-end-line="55" />
-          <folding>
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recursos/css/style.css" />
     <entry file="file://$PROJECT_DIR$/recursos/datatables/jszip.min.js" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/47e1f50e-68fa-419e-b38a-dfe7ba51128a/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/recursos/plugins/bootbox/bootbox.min.js" />
     <entry file="file://$PROJECT_DIR$/recursos/js/bootbox.min.js" />
     <entry file="file://$PROJECT_DIR$/recursos/js/jquery-3.1.1.min.js" />
@@ -402,91 +479,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vista/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modelo/Habitacion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="63" column="25" lean-forward="true" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
-          <folding>
-            <element signature="n#listar#0;n#Habitacion#0;n#!!top" />
-            <element signature="n#insertar#0;n#Habitacion#0;n#!!top" />
-            <element signature="n#editar#0;n#Habitacion#0;n#!!top" />
-            <element signature="n#getIdhabitacion#0;n#Habitacion#0;n#!!top" />
-            <element signature="n#setIdhabitacion#0;n#Habitacion#0;n#!!top" />
-            <element signature="n#getNumero#0;n#Habitacion#0;n#!!top" />
-            <element signature="n#setNumero#0;n#Habitacion#0;n#!!top" />
-            <element signature="n#getPiso#0;n#Habitacion#0;n#!!top" />
-            <element signature="n#setPiso#0;n#Habitacion#0;n#!!top" />
-            <element signature="n#getMaxPersonas#0;n#Habitacion#0;n#!!top" />
-            <element signature="n#setMaxPersonas#0;n#Habitacion#0;n#!!top" />
-            <element signature="n#getCosto#0;n#Habitacion#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/habitacion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controlador/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
           <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vista/huesped.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vista/habitacion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="105" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/conexion/Conexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modelo/Huesped.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="47" column="27" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/huesped.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vista/librerias/huesped.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="97" column="40" selection-start-line="97" selection-start-column="39" selection-end-line="97" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -505,14 +501,172 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/recursos/css/estilos.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/habitacion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="54" column="57" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms2.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="604" column="16" selection-start-line="604" selection-start-column="16" selection-end-line="604" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlador/huesped.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/huesped.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="99" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/47e1f50e-68fa-419e-b38a-dfe7ba51128a/console_1.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recursos/js/bootstrap-datetimepicker.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recursos/css/bootstrap-datetimepicker.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="24" column="22" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="24" selection-end-column="22" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recursos/css/datepicker.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/vista/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+        <state relative-caret-position="28">
+          <caret line="52" column="63" selection-start-line="52" selection-start-column="63" selection-end-line="52" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlador/habitacion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
           <folding>
-            <element signature="n#style#0;n#b#0;n#h4#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#small#0;n#h4#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modelo/Habitacion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+          <folding>
+            <element signature="n#insertar#0;n#Habitacion#0;n#!!top" />
+            <element signature="n#editar#0;n#Habitacion#0;n#!!top" />
+            <element signature="n#getIdhabitacion#0;n#Habitacion#0;n#!!top" />
+            <element signature="n#setIdhabitacion#0;n#Habitacion#0;n#!!top" />
+            <element signature="n#getNumero#0;n#Habitacion#0;n#!!top" />
+            <element signature="n#setNumero#0;n#Habitacion#0;n#!!top" />
+            <element signature="n#getPiso#0;n#Habitacion#0;n#!!top" />
+            <element signature="n#setPiso#0;n#Habitacion#0;n#!!top" />
+            <element signature="n#getMaxPersonas#0;n#Habitacion#0;n#!!top" />
+            <element signature="n#setMaxPersonas#0;n#Habitacion#0;n#!!top" />
+            <element signature="n#getCosto#0;n#Habitacion#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlador/conexion/Conexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="32" column="90" selection-start-line="32" selection-start-column="74" selection-end-line="32" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modelo/Huesped.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="65" column="46" lean-forward="true" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/47e1f50e-68fa-419e-b38a-dfe7ba51128a/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="14" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modelo/Reserva.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="134" column="25" selection-start-line="134" selection-start-column="24" selection-end-line="134" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlador/reserva.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-109">
+          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/librerias/huesped.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="57" column="18" lean-forward="true" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/reserva.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="51" column="53" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/librerias/reserva.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="121" column="44" lean-forward="true" selection-start-line="121" selection-start-column="44" selection-end-line="121" selection-end-column="44" />
         </state>
       </provider>
     </entry>

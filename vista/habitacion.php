@@ -6,8 +6,22 @@ require 'header.php';
 <div class="container small">
     <div class="row card-deck mb-12" id="listadoregistros">
         <div class="card mb-12">
+            <!-- Large modal -->
+<!--            <button type="button" class="btn btn-primary" data-toggle="modal"-->
+<!--                    data-target=".bd-example-modal-lg">Large modal-->
+<!--            </button>-->
+<!---->
+<!--            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"-->
+<!--                 aria-labelledby="myLargeModalLabel" aria-hidden="true">-->
+<!--                <div class="modal-dialog modal-lg">-->
+<!--                    <div class="modal-content">-->
+<!--                        ...-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
             <div class="card-header">
-                <h4 class="my-0 font-weight-normal" style="font-family: 'Acme', sans-serif;">Habitaciones
+                <h4 class="my-0 font-weight-normal titulo">Habitaciones
                     <button type="button" class="btn btn-success btn-sm" id="btnagregar"
                             onclick="mostrarform(true)"><i
                                 class="fa fa-plus-circle"></i> Agregar
@@ -38,7 +52,7 @@ require 'header.php';
     <div class="row card-deck mb-12" id="formularioregistros">
         <div class="card mb-12">
             <div class="card-header">
-                <h4 class="my-0 font-weight-normal" style="font-family: 'Acme', sans-serif;">Nueva Habitación</h4>
+                <h4 class="my-0 font-weight-normal titulo">Nueva Habitación</h4>
                 <br>
                 <div class="needs-validation">
                     <form name="formulario" id="formulario" method="POST">
