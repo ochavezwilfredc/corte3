@@ -28,7 +28,7 @@ switch ($_GET["opc"]) {
         $habitaciones = $habitacion->listar();
         $data = array();
         foreach ($habitaciones as $hab) {
-            $opcbebe = ($hab["tiene_cama_bebe"] == '1') ? '<p style="color:green">Si</p>' : '<p style="color:red">No</p>';
+            $opcbebe = ($hab["tiene_cama_bebe"] == '1') ? '<p class="text-success">Si</p>' : '<p class="text-danger">No</p>';
             $data[] = array(
                 "0" => $hab["numero"],
                 "1" => $hab["piso"],
@@ -36,8 +36,8 @@ switch ($_GET["opc"]) {
                 "3" => $hab["costo"],
                 "4" => $opcbebe,
                 "5" => $hab["descripcion"],
-                "6" => '<button class="btn btn-sm" onclick="mostrar(' . $hab["idhabitacion"] . ')"><i class="fas fa-edit"></i></button>' .
-                    ' <button class="btn btn-sm" onclick="eliminar(' . $hab["idhabitacion"] . ')"><i class="fas fa-trash"></i></button>'
+                "6" => '<button class="btn btn-sm text-primary" onclick="mostrar(' . $hab["idhabitacion"] . ')"><i class="fas fa-edit"></i></button>' .
+                    ' <button class="btn btn-sm text-danger" onclick="eliminar(' . $hab["idhabitacion"] . ')"><i class="fas fa-trash"></i></button>'
             );
         }
 

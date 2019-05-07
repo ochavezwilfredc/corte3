@@ -21,10 +21,10 @@
 //    echo "<br>";
 //}
 
-require_once '../modelo/pdo/Huesped.php';
+require_once '../modelo/Huesped.php';
 
 $hue = new Huesped("Lesly","12345678","320369852", "lesl@gmail.com","chiclayo");
-//$hue->insertar();
+$hue->insertar();
 //$hue->setNombre("Lesly pintado");
 //$hue->setIdhuesped("4");
 //$hue->eliminar("4");

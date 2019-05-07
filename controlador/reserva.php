@@ -54,11 +54,11 @@ switch ($_GET["opc"]) {
                 "4" => $res["hab_num"],
                 "5" => $res["hab_costo"],
                 "6" => $res["comentario"],
-                "7" => ($res["estado"] == "1") ? '<span class="label bg-green">Habilitada</span>' :
-                    '<span class="label bg-red">Deshabilitada</span>',
-                "8" => ($res["estado"] == '1') ? '<button class="btn btn-sm" onclick="mostrar(' . $res["idreserva"] . ')"><i class="fas fa-eye"></i></button>' .
-                    ' <button class="btn btn-sm" onclick="anular(' . $res["idreserva"] . ')"><i class="fas fa-window-close"></i></button>' :
-                    '<button class="btn btn-sm" onclick="mostrar(' . $res["idreserva"] . ')"><i class="fas fa-eye"></i></button>',
+                "7" => ($res["estado"] == "1") ? '<span class="text-success">Activa</span>' :
+                    '<span class="text-danger">Anulada</span>',
+                "8" => ($res["estado"] == '1') ? '<button class="btn btn-sm text-info" onclick="mostrar(' . $res["idreserva"] . ')"><i class="fas fa-eye"></i></button>' .
+                    ' <button class="btn btn-sm text-danger" onclick="anular(' . $res["idreserva"] . ')"><i class="fas fa-window-close"></i></button>' :
+                    '<button class="btn btn-sm text-info" onclick="mostrar(' . $res["idreserva"] . ')"><i class="fas fa-eye"></i></button>',
             );
         }
         $results = array(

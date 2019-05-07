@@ -1,2 +1,2 @@
 <?php
-header("Location: vista/habitacion.php");
+header("Location: vista/reserva.php");

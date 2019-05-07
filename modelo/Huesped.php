@@ -56,7 +56,6 @@ class Huesped extends Conectar
                 VALUES ('$this->nombre','$this->cedula','$this->telefono','$this->email','$this->direccion')";
         $sql = $conectar->prepare($sql);
         return $sql->execute();
-
     }
 
 
