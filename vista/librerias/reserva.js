@@ -7,7 +7,7 @@ function init() {
     listar();
 
     $("#formulario").on("submit", function (e) {
-        guardaryeditar(e);
+        insertar(e);
     });
 
     //Cargamos los items al select habitaciones
@@ -86,15 +86,13 @@ function listar() {
         }).DataTable();
 }
 
-//Función para guardar o editar
-
-function guardaryeditar(e) {
+function insertar(e) {
     e.preventDefault(); //No se activará la acción predeterminada del evento
     //$("#btnGuardar").prop("disabled",true);
     var formData = new FormData($("#formulario")[0]);
 
     $.ajax({
-        url: "../controlador/reserva.php?opc=guardaroeditar",
+        url: "../controlador/reserva.php?opc=insertar",
         type: "POST",
         data: formData,
         contentType: false,
@@ -111,7 +109,7 @@ function guardaryeditar(e) {
 }
 
 function mostrar(idreserva) {
-    console.log(idreserva);
+    // console.log(idreserva);
     $.post("../controlador/reserva.php?opc=mostrar", {idreserva: idreserva}, function (data, status) {
         data = JSON.parse(data);
         mostrarform(true);

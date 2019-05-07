@@ -1,17 +1,18 @@
 <?php
+require_once "../modelo/Conectar.php";
 require_once "../modelo/Huesped.php";
 
-$idhuesped = isset($_POST["idhuesped"]) ? limpiarCadena($_POST["idhuesped"]) : "";
-$nombre = isset($_POST["nombre"]) ? limpiarCadena($_POST["nombre"]) : "";
-$cedula = isset($_POST["cedula"]) ? limpiarCadena($_POST["cedula"]) : "";
-$telefono = isset($_POST["telefono"]) ? limpiarCadena($_POST["telefono"]) : "";
-$email = isset($_POST["email"]) ? limpiarCadena($_POST["email"]) : "";
-$direccion = isset($_POST["direccion"]) ? limpiarCadena($_POST["direccion"]) : "";
+$idhuesped = isset($_POST["idhuesped"]) ? $_POST["idhuesped"] : "";
+$nombre = isset($_POST["nombre"]) ? $_POST["nombre"] : "";
+$cedula = isset($_POST["cedula"]) ? $_POST["cedula"] : "";
+$telefono = isset($_POST["telefono"]) ? $_POST["telefono"] : "";
+$email = isset($_POST["email"]) ? $_POST["email"] : "";
+$direccion = isset($_POST["direccion"]) ? $_POST["direccion"] : "";
 
 $huesped = new Huesped($nombre, $cedula, $telefono, $email, $direccion);
 
 switch ($_GET["opc"]) {
-    case 'guardaroeditar':
+    case 'insertaroeditar':
         if (empty($idhuesped)) {
             $rspta = $huesped->insertar();
             echo $rspta ? "Huésped registrado correctamente" : "No se pudo registarar el huésped";
@@ -26,15 +27,15 @@ switch ($_GET["opc"]) {
     case 'listar':
         $huespedes = $huesped->listar();
         $data = array();
-        while ($hab = $huespedes->fetch_object()) {
+        foreach ($huespedes as $hue) {
             $data[] = array(
-                "0" => $hab->nombre,
-                "1" => $hab->cedula,
-                "2" => $hab->telefono,
-                "3" => $hab->email,
-                "4" => $hab->direccion,
-                "5" => '<button class="btn btn-sm" onclick="mostrar(' . $hab->idhuesped . ')"><i class="fas fa-edit"></i></button>' .
-                    ' <button class="btn btn-sm" onclick="eliminar(' . $hab->idhuesped . ')"><i class="fas fa-trash"></i></button>'
+                "0" => $hue["nombre"],
+                "1" => $hue["cedula"],
+                "2" => $hue["telefono"],
+                "3" => $hue["email"],
+                "4" => $hue["direccion"],
+                "5" => '<button class="btn btn-sm" onclick="mostrar(' . $hue["idhuesped"] . ')"><i class="fas fa-edit"></i></button>' .
+                    ' <button class="btn btn-sm" onclick="eliminar(' . $hue["idhuesped"] . ')"><i class="fas fa-trash"></i></button>'
             );
         }
         $results = array(
@@ -51,8 +52,17 @@ switch ($_GET["opc"]) {
         break;
 
     case 'mostrar':
-        $rspta = $huesped->mostrar($idhuesped);
-        echo json_encode($rspta);
+        $datos = $huesped->mostrar($idhuesped);
+        foreach ($datos as $hue) {
+            $huesp["idhuesped"] = $hue["idhuesped"];
+            $huesp["nombre"] = $hue["nombre"];
+            $huesp["cedula"] = $hue["cedula"];
+            $huesp["telefono"] = $hue["telefono"];
+            $huesp["email"] = $hue["email"];
+            $huesp["direccion"] = $hue["direccion"];
+        }
+        echo json_encode($huesp);
+
         break;
 
 

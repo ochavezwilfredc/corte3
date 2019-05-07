@@ -5,7 +5,7 @@ function init() {
     mostrarform(false);
     listar();
     $("#formulario").on("submit", function (e) {
-        guardaryeditar(e);
+        insertar_o_editar(e);
     })
 }
 
@@ -64,13 +64,13 @@ function listar() {
     }).DataTable();
 }
 
-function guardaryeditar(e) {
+function insertar_o_editar(e) {
     e.preventDefault(); //No se activará la acción predeterminada del evento
     $("#btnGuardar").prop("disabled", true);
     var formData = new FormData($("#formulario")[0]); // aca recibe todos los datos del formulario
 
     $.ajax({
-        url: "../controlador/huesped.php?opc=guardaroeditar",
+        url: "../controlador/huesped.php?opc=insertaroeditar",
         type: "POST",
         data: formData,
         contentType: false,
@@ -86,8 +86,8 @@ function guardaryeditar(e) {
 }
 
 function mostrar(idhuesped) {
-    $.post("../controlador/huesped.php?opc=mostrar", {idhuesped: idhuesped}, function (data, status)
-    {
+    console.log(idhuesped);
+    $.post("../controlador/huesped.php?opc=mostrar", {idhuesped: idhuesped}, function (data, status) {
         data = JSON.parse(data);
         mostrarform(true);
         $("#nombre").val(data.nombre);

@@ -1,23 +1,17 @@
 <?php
-require_once "../controlador/conexion/Conexion.php";
+require_once("Conectar.php");
 
-class Reserva
+class Reserva extends Conectar
 {
     private $idreserva, $fecha_inicio, $fecha_fin, $estado, $comentario, $idhabitacion, $idhuesped;
 
     //    Fuente: https://desarrolloweb.com/articulos/sobrecarga-constructores-php.html
     function __construct()
     {
-        //obtengo un array con los parámetros enviados a la función
         $params = func_get_args();
-        //saco el número de parámetros que estoy recibiendo
         $num_params = func_num_args();
-        //cada constructor de un número dado de parámtros tendrá un nombre de función
-        //atendiendo al siguiente modelo __construct1() __construct2()...
         $funcion_constructor = '__construct' . $num_params;
-        //compruebo si hay un constructor con ese número de parámetros
         if (method_exists($this, $funcion_constructor)) {
-            //si existía esa función, la invoco, reenviando los parámetros que recibí en el constructor original
             call_user_func_array(array($this, $funcion_constructor), $params);
         }
     }
@@ -67,6 +61,8 @@ class Reserva
 
     public function listar()
     {
+        $conectar = parent::conexion();
+        parent::set_names();
         $sql = "select
                     r.idreserva,
                     DATE(r.fecha_inicio) as fecha_inicio,
@@ -81,18 +77,25 @@ class Reserva
                         inner join habitacion h on r.idhabitacion = h.idhabitacion
                         inner join huesped h2 on r.idhuesped = h2.idhuesped
                     order by r.idreserva";
-        return ejecutarConsulta($sql);
+        $sql = $conectar->prepare($sql);
+        $sql->execute();
+        return $resultado = $sql->fetchAll();
     }
 
     public function insertar()
     {
+        $conectar = parent::conexion();
+        parent::set_names();
         $sql = "INSERT INTO reserva(fecha_inicio, fecha_fin, estado, comentario, idhabitacion, idhuesped)
                 VALUES ('$this->fecha_inicio','$this->fecha_fin','$this->estado','$this->comentario','$this->idhabitacion','$this->idhuesped')";
-        return ejecutarConsulta($sql);
+        $sql = $conectar->prepare($sql);
+        return $sql->execute();
     }
 
     public function editar()
     {
+        $conectar = parent::conexion();
+        parent::set_names();
         $sql = "UPDATE reserva 
                     SET fecha_inicio='$this->fecha_inicio',
                         fecha_fin='$this->fecha_fin',
@@ -101,27 +104,36 @@ class Reserva
                         idhabitacion='$this->idhabitacion',
                         idhuesped='$this->idhuesped'
                     WHERE idreserva=='$this->idreserva'";
-        return ejecutarConsulta($sql);
+        $sql = $conectar->prepare($sql);
+        return $sql->execute();
     }
 
     public function anular($idreserva)
     {
+        $conectar = parent::conexion();
+        parent::set_names();
         $sql = "UPDATE reserva
                     SET estado ='0' 
                     WHERE idreserva='$idreserva'";
-        return ejecutarConsulta($sql);
+        $sql = $conectar->prepare($sql);
+        return $sql->execute();
     }
 
     public function activar($idreserva)
     {
+        $conectar = parent::conexion();
+        parent::set_names();
         $sql = "UPDATE reserva 
                     SET condicion='1' 
                     WHERE idreserva='$idreserva'";
-        return ejecutarConsulta($sql);
+        $sql = $conectar->prepare($sql);
+        return $sql->execute();
     }
 
     public function mostrar($idreserva)
     {
+        $conectar = parent::conexion();
+        parent::set_names();
         $sql = "select
                         r.idreserva,
                         DATE(r.fecha_inicio) as fecha_inicio,
@@ -138,15 +150,20 @@ class Reserva
                              inner join habitacion h on r.idhabitacion = h.idhabitacion
                              inner join huesped h2 on r.idhuesped = h2.idhuesped
                     where r.idreserva = '$idreserva'";
-        return ejecutarConsultaSimpleFila($sql);
+        $sql = $conectar->prepare($sql);
+        $sql->execute();
+        return $resultado = $sql->fetchALL(PDO::FETCH_ASSOC);
     }
 
 
     public function select()
     {
+        $conectar = parent::conexion();
+        parent::set_names();
         $sql = "SELECT * FROM reserva 
                     where condicion=1";
-        return ejecutarConsulta($sql);
+        $sql = $conectar->prepare($sql);
+        return $sql->execute();
     }
 
     /**

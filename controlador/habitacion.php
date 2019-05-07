@@ -1,18 +1,19 @@
 <?php
+require_once "../modelo/Conectar.php";
 require_once "../modelo/Habitacion.php";
 
-$idhabitacion = isset($_POST["idhabitacion"]) ? limpiarCadena($_POST["idhabitacion"]) : "";
-$numero = isset($_POST["numero"]) ? limpiarCadena($_POST["numero"]) : "";
-$piso = isset($_POST["piso"]) ? limpiarCadena($_POST["piso"]) : "";
-$max_personas = isset($_POST["max_personas"]) ? limpiarCadena($_POST["max_personas"]) : "";
-$costo = isset($_POST["costo"]) ? limpiarCadena($_POST["costo"]) : "";
-$tiene_cama_bebe = isset($_POST["tiene_cama_bebe"]) ? limpiarCadena($_POST["tiene_cama_bebe"]) : "";
-$descripcion = isset($_POST["descripcion"]) ? limpiarCadena($_POST["descripcion"]) : "";
+$idhabitacion = isset($_POST["idhabitacion"]) ? $_POST["idhabitacion"] : "";
+$numero = isset($_POST["numero"]) ? $_POST["numero"] : "";
+$piso = isset($_POST["piso"]) ? $_POST["piso"] : "";
+$max_personas = isset($_POST["max_personas"]) ? $_POST["max_personas"] : "";
+$costo = isset($_POST["costo"]) ? $_POST["costo"] : "";
+$tiene_cama_bebe = isset($_POST["tiene_cama_bebe"]) ? $_POST["tiene_cama_bebe"] : "";
+$descripcion = isset($_POST["descripcion"]) ? $_POST["descripcion"] : "";
 
 $habitacion = new Habitacion($numero, $piso, $max_personas, $costo, $tiene_cama_bebe, $descripcion);
 
 switch ($_GET["opc"]) {
-    case 'guardaroeditar':
+    case 'insertaroeditar':
         if (empty($idhabitacion)) {
             $rspta = $habitacion->insertar();
             echo $rspta ? "Habitación registrada correctamente" : "No se pudo registarar la habitación";
@@ -26,19 +27,20 @@ switch ($_GET["opc"]) {
     case 'listar':
         $habitaciones = $habitacion->listar();
         $data = array();
-        while ($hab = $habitaciones->fetch_object()) {
-            $opcbebe = ($hab->tiene_cama_bebe == '1') ? '<p style="color:green">Si</p>' : '<p style="color:red">No</p>';
+        foreach ($habitaciones as $hab) {
+            $opcbebe = ($hab["tiene_cama_bebe"] == '1') ? '<p style="color:green">Si</p>' : '<p style="color:red">No</p>';
             $data[] = array(
-                "0" => $hab->numero,
-                "1" => $hab->piso,
-                "2" => $hab->max_personas,
-                "3" => $hab->costo,
+                "0" => $hab["numero"],
+                "1" => $hab["piso"],
+                "2" => $hab["max_personas"],
+                "3" => $hab["costo"],
                 "4" => $opcbebe,
-                "5" => $hab->descripcion,
-                "6" => '<button class="btn btn-sm" onclick="mostrar(' . $hab->idhabitacion . ')"><i class="fas fa-edit"></i></button>' .
-                    ' <button class="btn btn-sm" onclick="eliminar(' . $hab->idhabitacion . ')"><i class="fas fa-trash"></i></button>'
+                "5" => $hab["descripcion"],
+                "6" => '<button class="btn btn-sm" onclick="mostrar(' . $hab["idhabitacion"] . ')"><i class="fas fa-edit"></i></button>' .
+                    ' <button class="btn btn-sm" onclick="eliminar(' . $hab["idhabitacion"] . ')"><i class="fas fa-trash"></i></button>'
             );
         }
+
         $results = array(
             "sEcho" => 1, //Información para el datatables
             "iTotalRecords" => count($data), //se envia el total registros al datatable
@@ -53,8 +55,17 @@ switch ($_GET["opc"]) {
         break;
 
     case 'mostrar':
-        $rspta = $habitacion->mostrar($idhabitacion);
-        echo json_encode($rspta);
+        $datos = $habitacion->mostrar($idhabitacion);
+        foreach ($datos as $hab) {
+            $habita["idhabitacion"] = $hab["idhabitacion"];
+            $habita["numero"] = $hab["numero"];
+            $habita["piso"] = $hab["piso"];
+            $habita["max_personas"] = $hab["max_personas"];
+            $habita["costo"] = $hab["costo"];
+            $habita["tiene_cama_bebe"] = $hab["tiene_cama_bebe"];
+            $habita["descripcion"] = $hab["descripcion"];
+        }
+        echo json_encode($habita);
         break;
 
 

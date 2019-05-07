@@ -1,29 +1,22 @@
 <?php
 
-require_once "../controlador/conexion/Conexion.php";
+require_once("Conectar.php");
 
-class Huesped
+class Huesped extends Conectar
 {
     private $idhuesped, $nombre, $cedula, $telefono, $email, $direccion;
 
     //    Fuente: https://desarrolloweb.com/articulos/sobrecarga-constructores-php.html
     function __construct()
     {
-        //obtengo un array con los parámetros enviados a la función
         $params = func_get_args();
-        //saco el número de parámetros que estoy recibiendo
         $num_params = func_num_args();
-        //cada constructor de un número dado de parámtros tendrá un nombre de función
-        //atendiendo al siguiente modelo __construct1() __construct2()...
         $funcion_constructor = '__construct' . $num_params;
-        //compruebo si hay un constructor con ese número de parámetros
         if (method_exists($this, $funcion_constructor)) {
-            //si existía esa función, la invoco, reenviando los parámetros que recibí en el constructor original
             call_user_func_array(array($this, $funcion_constructor), $params);
         }
     }
 
-    //ahora declaro una serie de métodos constructores que aceptan diversos números de parámetros
     function __construct0()
     {
     }
@@ -47,19 +40,30 @@ class Huesped
 
     public function listar()
     {
+        $conectar = parent::conexion();
+        parent::set_names();
         $sql = "SELECT * FROM huesped";
-        return ejecutarConsulta($sql);
+        $sql = $conectar->prepare($sql);
+        $sql->execute();
+        return $resultado = $sql->fetchAll();
     }
 
     public function insertar()
     {
+        $conectar = parent::conexion();
+        parent::set_names();
         $sql = "INSERT INTO huesped(nombre, cedula, telefono, email, direccion) 
                 VALUES ('$this->nombre','$this->cedula','$this->telefono','$this->email','$this->direccion')";
-        return ejecutarConsulta($sql);
+        $sql = $conectar->prepare($sql);
+        return $sql->execute();
+
     }
+
 
     public function editar()
     {
+        $conectar = parent::conexion();
+        parent::set_names();
         $sql = "UPDATE huesped 
                 SET nombre='$this->nombre',
                     cedula='$this->cedula',
@@ -67,23 +71,32 @@ class Huesped
                     email='$this->email',
                     direccion='$this->direccion' 
                 WHERE idhuesped='$this->idhuesped'";
-        return ejecutarConsulta($sql);
+
+        $sql = $conectar->prepare($sql);
+        return $sql->execute();
     }
 
     public function eliminar($idhuesped)
     {
+        $conectar = parent::conexion();
+        parent::set_names();
         $sql = "DELETE 
                     FROM huesped 
                     WHERE idhuesped='$idhuesped'";
-        return ejecutarConsulta($sql);
+        $sql = $conectar->prepare($sql);
+        return $sql->execute();
     }
 
     public function mostrar($idhuesped)
     {
+        $conectar = parent::conexion();
+        parent::set_names();
         $sql = "SELECT * 
                     FROM huesped 
                     WHERE idhuesped='$idhuesped'";
-        return ejecutarConsultaSimpleFila($sql);
+        $sql = $conectar->prepare($sql);
+        $sql->execute();
+        return $resultado = $sql->fetchALL(PDO::FETCH_ASSOC);
     }
 
     /**
@@ -194,5 +207,5 @@ class Huesped
         return $aux;
     }
 
-
 }
+

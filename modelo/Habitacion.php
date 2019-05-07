@@ -1,7 +1,7 @@
 <?php
-require_once "../controlador/conexion/Conexion.php";
+require_once("Conectar.php");
 
-class Habitacion
+class Habitacion extends Conectar
 {
     private $idhabitacion, $numero, $piso, $max_personas, $costo, $tiene_cama_bebe, $descripcion;
 
@@ -9,21 +9,14 @@ class Habitacion
 //    Fuente: https://desarrolloweb.com/articulos/sobrecarga-constructores-php.html
     function __construct()
     {
-        //obtengo un array con los parámetros enviados a la función
         $params = func_get_args();
-        //saco el número de parámetros que estoy recibiendo
         $num_params = func_num_args();
-        //cada constructor de un número dado de parámtros tendrá un nombre de función
-        //atendiendo al siguiente modelo __construct1() __construct2()...
         $funcion_constructor = '__construct' . $num_params;
-        //compruebo si hay un constructor con ese número de parámetros
         if (method_exists($this, $funcion_constructor)) {
-            //si existía esa función, la invoco, reenviando los parámetros que recibí en el constructor original
             call_user_func_array(array($this, $funcion_constructor), $params);
         }
     }
 
-    //ahora declaro una serie de métodos constructores que aceptan diversos números de parámetros
     function __construct0()
     {
     }
@@ -50,19 +43,28 @@ class Habitacion
 
     public function listar()
     {
+        $conectar = parent::conexion();
+        parent::set_names();
         $sql = "SELECT * FROM habitacion";
-        return ejecutarConsulta($sql);
+        $sql = $conectar->prepare($sql);
+        $sql->execute();
+        return $resultado = $sql->fetchAll();
     }
 
     public function insertar()
     {
+        $conectar = parent::conexion();
+        parent::set_names();
         $sql = "INSERT INTO habitacion(numero, piso, max_personas, costo, tiene_cama_bebe, descripcion)
                 VALUES ('$this->numero','$this->piso','$this->max_personas','$this->costo','$this->tiene_cama_bebe','$this->descripcion')";
-        return ejecutarConsulta($sql);
+        $sql = $conectar->prepare($sql);
+        return $sql->execute();
     }
 
     public function editar()
     {
+        $conectar = parent::conexion();
+        parent::set_names();
         $sql = "UPDATE habitacion 
                 SET numero='$this->numero',
                     piso='$this->piso',
@@ -71,23 +73,31 @@ class Habitacion
                     tiene_cama_bebe='$this->tiene_cama_bebe',
                     descripcion='$this->descripcion' 
                 WHERE idhabitacion='$this->idhabitacion'";
-        return ejecutarConsulta($sql);
+        $sql = $conectar->prepare($sql);
+        return $sql->execute();
     }
 
     public function eliminar($idhabitacion)
     {
+        $conectar = parent::conexion();
+        parent::set_names();
         $sql = "DELETE 
                     FROM habitacion 
                     WHERE idhabitacion='$idhabitacion'";
-        return ejecutarConsulta($sql);
+        $sql = $conectar->prepare($sql);
+        return $sql->execute();
     }
 
     public function mostrar($idhabitacion)
     {
+        $conectar = parent::conexion();
+        parent::set_names();
         $sql = "SELECT * 
                     FROM habitacion 
                     WHERE idhabitacion='$idhabitacion'";
-        return ejecutarConsultaSimpleFila($sql);
+        $sql = $conectar->prepare($sql);
+        $sql->execute();
+        return $resultado = $sql->fetchALL(PDO::FETCH_ASSOC);
     }
 
     /**
