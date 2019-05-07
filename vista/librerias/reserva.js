@@ -41,6 +41,7 @@ function mostrarform(flag) {
         $("#formularioregistros").show(); // mostrar
         $("#btnGuardar").prop("disabled", false);
         $("#btnagregar").hide();
+        listarHuespedes();
     } else {
         $("#listadoregistros").show(); //mostrar
         $("#formularioregistros").hide(); //ocultar
@@ -108,6 +109,41 @@ function insertar(e) {
     limpiar();
 }
 
+//Función listarHuespedes
+function listarHuespedes() {
+    tabla = $('#tblarticulos').dataTable(
+        {
+            "aProcessing": true,//Activamos el procesamiento del datatables
+            "aServerSide": true,//Paginación y filtrado realizados por el servidor
+            dom: 'Bfrtip',//Definimos los elementos del control de tabla
+            buttons: [],
+            "ajax":
+                {
+                    url: '../controlador/reserva.php?opc=listarHuespedes',
+                    type: "get",
+                    dataType: "json",
+                    error: function (e) {
+                        console.log(e.responseText);
+                    }
+                },
+            "bDestroy": true,
+            "iDisplayLength": 10,//Paginación
+            "order": [[0, "desc"]],
+            "language": {
+                "url": "https://cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json"
+            }
+        }).DataTable();
+}
+
+function agregarHuesped(idhuesped, nombre) {
+    if (idhuesped != "") {
+        $("#idhuesped").val(idhuesped);
+        $("#nombre").val(nombre);
+
+        // $("#idhuesped").selectpicker('refresh');
+    }
+}
+
 function mostrar(idreserva) {
     // console.log(idreserva);
     $.post("../controlador/reserva.php?opc=mostrar", {idreserva: idreserva}, function (data, status) {
@@ -129,7 +165,7 @@ function mostrar(idreserva) {
         $("#comentario").prop('disabled', true);
 
         $("#idhuesped").val(data.idhuesped);
-        $("#idhuesped").selectpicker('refresh');
+        // $("#idhuesped").selectpicker('refresh');
         $("#idhuesped").prop('disabled', true);
 
 

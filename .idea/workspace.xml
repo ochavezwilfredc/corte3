@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="efda2fab-e383-440e-b2e6-dacc9ca865d2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controlador/habitacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/habitacion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controlador/huesped.php" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/huesped.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controlador/reserva.php" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/reserva.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controlador/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modelo/Huesped.php" beforeDir="false" afterPath="$PROJECT_DIR$/modelo/Huesped.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recursos/css/estilos.css" beforeDir="false" afterPath="$PROJECT_DIR$/recursos/css/estilos.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/librerias/reserva.js" beforeDir="false" afterPath="$PROJECT_DIR$/vista/librerias/reserva.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/reserva.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/reserva.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,32 +53,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controlador/test.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="25" column="66" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="66" />
-              <folding>
-                <element signature="e#6#48#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vista/header.php">
+        <entry file="file://$PROJECT_DIR$/vista/reserva.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="43" column="40" selection-start-line="43" selection-end-line="44" />
+            <state relative-caret-position="408">
+              <caret line="51" column="76" selection-start-line="51" selection-start-column="69" selection-end-line="51" selection-end-column="76" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recursos/css/estilos.css">
+        <entry file="file://$PROJECT_DIR$/vista/librerias/reserva.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="322">
+              <caret line="146" column="29" lean-forward="true" selection-start-line="146" selection-start-column="29" selection-end-line="146" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -90,26 +74,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controlador/huesped.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            <state>
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vista/librerias/huesped.js">
+        <entry file="file://$PROJECT_DIR$/controlador/reserva.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="77" column="32" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="32" />
+            <state relative-caret-position="336">
+              <caret line="87" column="9" lean-forward="true" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modelo/Huesped.php">
+        <entry file="file://$PROJECT_DIR$/recursos/css/estilos.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+            <state relative-caret-position="64">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -126,7 +110,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$articulo</find>
       <find>huesped</find>
       <find>proveedor</find>
       <find>cedula</find>
@@ -153,12 +136,12 @@
       <find>guardaryeditar</find>
       <find>pdo/</find>
       <find>const</find>
-      <find>limpiarCadena(</find>
       <find>mostrar</find>
       <find>insertar_o_editar</find>
+      <find>listarArticulos</find>
+      <find>agregarHuesped</find>
     </findStrings>
     <replaceStrings>
-      <replace>direccion</replace>
       <replace>idhuesped</replace>
       <replace>reservas</replace>
       <replace>res</replace>
@@ -188,6 +171,7 @@
       <replace>insertar</replace>
       <replace>insertar_o_editar</replace>
       <replace>private</replace>
+      <replace>listarHuespedes</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -216,7 +200,6 @@
         <option value="$PROJECT_DIR$/vista/huesped.php" />
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/test.js" />
-        <option value="$PROJECT_DIR$/vista/reserva.php" />
         <option value="$PROJECT_DIR$/modelo/Habitacion.php" />
         <option value="$PROJECT_DIR$/vista/footer.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/47e1f50e-68fa-419e-b38a-dfe7ba51128a/console.sql" />
@@ -228,19 +211,20 @@
         <option value="$PROJECT_DIR$/modelo/pdo/Habitacion.php" />
         <option value="$PROJECT_DIR$/modelo/pdo/Huesped.php" />
         <option value="$PROJECT_DIR$/modelo/pdo/Reserva.php" />
-        <option value="$PROJECT_DIR$/modelo/Reserva.php" />
         <option value="$PROJECT_DIR$/modelo/Conectar.php" />
-        <option value="$PROJECT_DIR$/vista/librerias/reserva.js" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/controlador/reserva.php" />
         <option value="$PROJECT_DIR$/controlador/habitacion.php" />
         <option value="$PROJECT_DIR$/vista/librerias/habitacion.js" />
         <option value="$PROJECT_DIR$/modelo/Huesped.php" />
         <option value="$PROJECT_DIR$/vista/librerias/huesped.js" />
         <option value="$PROJECT_DIR$/controlador/test.php" />
         <option value="$PROJECT_DIR$/controlador/huesped.php" />
-        <option value="$PROJECT_DIR$/recursos/css/estilos.css" />
         <option value="$PROJECT_DIR$/vista/header.php" />
+        <option value="$PROJECT_DIR$/modelo/Reserva.php" />
+        <option value="$PROJECT_DIR$/vista/librerias/reserva.js" />
+        <option value="$PROJECT_DIR$/recursos/css/estilos.css" />
+        <option value="$PROJECT_DIR$/controlador/reserva.php" />
+        <option value="$PROJECT_DIR$/vista/reserva.php" />
       </list>
     </option>
   </component>
@@ -251,10 +235,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="php_installation_7" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="42" />
-    <option name="y" value="48" />
-    <option name="width" value="768" />
-    <option name="height" value="629" />
+    <option name="y" value="23" />
+    <option name="width" value="778" />
+    <option name="height" value="631" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -394,12 +377,12 @@
       <workItem from="1557175055385" duration="268000" />
       <workItem from="1557181874328" duration="5227000" />
       <workItem from="1557230694385" duration="10799000" />
-      <workItem from="1557241584120" duration="1007000" />
+      <workItem from="1557241584120" duration="6740000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109068000" />
+    <option name="totallyTimeSpent" value="114801000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="735" extended-state="6" />
@@ -511,35 +494,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vista/huesped.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="99" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recursos/js/bootstrap-datetimepicker.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/recursos/css/bootstrap-datetimepicker.min.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="24" column="22" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="24" selection-end-column="22" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/recursos/css/datepicker.css">
       <provider selected="true" editor-type-id="text-editor" />
@@ -573,20 +532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modelo/Reserva.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="147" column="36" selection-start-line="147" selection-start-column="27" selection-end-line="147" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vista/librerias/reserva.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="117" column="48" selection-start-line="117" selection-start-column="36" selection-end-line="117" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
@@ -594,24 +539,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vista/reserva.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="51" column="70" selection-start-line="51" selection-start-column="61" selection-end-line="51" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modelo/Conectar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/reserva.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="739">
-          <caret line="58" column="85" selection-start-line="58" selection-start-column="85" selection-end-line="58" selection-end-column="85" />
         </state>
       </provider>
     </entry>
@@ -647,13 +578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modelo/Huesped.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vista/librerias/huesped.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
@@ -671,24 +595,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vista/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="43" column="36" selection-start-line="43" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="33" column="37" lean-forward="true" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modelo/Reserva.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="74" column="28" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/huesped.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modelo/Huesped.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/librerias/reserva.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="146" column="29" lean-forward="true" selection-start-line="146" selection-start-column="29" selection-end-line="146" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controlador/huesped.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        <state>
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/recursos/css/estilos.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="64">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vista/header.php">
+    <entry file="file://$PROJECT_DIR$/controlador/reserva.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="43" column="40" selection-start-line="43" selection-end-line="44" />
+        <state relative-caret-position="336">
+          <caret line="87" column="9" lean-forward="true" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/reserva.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="51" column="76" selection-start-line="51" selection-start-column="69" selection-end-line="51" selection-end-column="76" />
         </state>
       </provider>
     </entry>

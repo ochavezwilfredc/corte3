@@ -69,6 +69,31 @@ switch ($_GET["opc"]) {
         echo json_encode($results);
         break;
 
+    case 'listarHuespedes':
+        require_once "../modelo/Huesped.php";
+        $huesped = new Huesped();
+        $data = array();
+        $huespedes = $huesped->listar();
+        foreach ($huespedes as $hue) {
+            $data[] = array(
+                "0" => $hue["nombre"],
+                "1" => $hue["cedula"],
+                "2" => $hue["telefono"],
+                "3" => $hue["email"],
+                "4" => $hue["direccion"],
+                "5" => '<button class="btn btn-sm btn-sm text-primary"  data-dismiss="modal" aria-hidden="true"
+                    onclick="agregarHuesped(' . $hue["idhuesped"] . ',\'' . $hue["nombre"] . '\')">
+                    <i class=" text-success fas fa-user-plus"></i>
+                    </button>');
+        }
+        $results = array(
+            "sEcho" => 1, //Información para el datatables
+            "iTotalRecords" => count($data), //se envia el total registros al datatable
+            "iTotalDisplayRecords" => count($data), //se envia el total registros a visualizar
+            "aaData" => $data);
+        echo json_encode($results);
+        break;
+
     case 'selectHabitaciones':
         require_once "../modelo/Habitacion.php";
         $habitacion = new Habitacion();

@@ -49,9 +49,9 @@ require 'header.php';
                             <div class="col-4 mb-3">
                                 <label>Huésped</label>
                                 <input type="hidden" name="idreserva" id="idreserva">
-                                <select id="idhuesped" name="idhuesped" class="form-control selectpicker"
-                                        data-live-search="true" data-style="btn-info" required>
-                                </select>
+                                <button type="button" class="btn btn-sm btn-link" data-toggle="modal" data-target=".bd-example-modal-lg">Seleccionar</button>
+                                <input type="hidden" name="idhuesped" id="idhuesped">
+                                <input type="text" class="form-control" name="nombre" id="nombre" required>
 
                             </div>
                             <div class="col-4 mb-3">
@@ -94,8 +94,43 @@ require 'header.php';
             </div>
         </div>
     </div>
+
+
 </div>
 <!--  Fin del contenido-->
+
+<!--Modal Seleccionar Huésped-->
+<div class="modal fade bd-example-modal-lg small" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+     aria-hidden="true" id="myModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="card mb-12">
+                <div class="card-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title titulo">Seleccionar un Huésped</h4>
+                    <br>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered" id="tblarticulos">
+                            <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Cédula</th>
+                                <th>Teléfono</th>
+                                <th>Email</th>
+                                <th>Dirección</th>
+                                <th>Opciones</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <?php
 require 'footer.php';
 ?>
