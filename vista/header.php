@@ -50,7 +50,11 @@
     <!--    Fechas-->
     <!--    <link rel="stylesheet" href="../recursos/css/bootstrap-datetimepicker.min.css">-->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="../recursos/css/datepicker.css">
+    <!--    <link rel="stylesheet"-->
+    <!--          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">-->
+    <!--    <link rel="stylesheet" href="../recursos/css/datepicker.css">-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+
     <!--    Estilo propio-->
     <link rel="stylesheet" href="../recursos/css/estilos.css">
 </head>

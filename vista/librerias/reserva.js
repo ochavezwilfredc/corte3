@@ -16,14 +16,13 @@ function init() {
         $('#idhabitacion').selectpicker('refresh');
     });
 
-
 }
 
 //Función limpiar
 function limpiar() {
     $("#idreserva").val("");
-    $("#fecha_inicio").val("");
-    $("#fecha_fin").val("");
+    $("#fechas").val("");
+    $("#fechas").val("");
     $("#idhabitacion").val("");
     $("#comentario").val("");
     $("#idhuesped").val("");
@@ -41,6 +40,7 @@ function mostrarform(flag) {
         $("#btnGuardar").prop("disabled", false);
         $("#btnagregar").hide();
         listarHuespedes();
+        // validar_fechas();
     } else {
         $("#listadoregistros").show(); //mostrar
         $("#formularioregistros").hide(); //ocultar
@@ -154,11 +154,11 @@ function mostrar(idreserva) {
         $("#idhabitacion").selectpicker('refresh');
         $("#idhabitacion").prop('disabled', true);
 
-        $("#fecha_inicio").val(data.fecha_inicio);
-        $("#fecha_inicio").prop('disabled', true);
+        $("#fechas").val(data.fechas);
+        $("#fechas").prop('disabled', true);
 
-        $("#fecha_fin").val(data.fecha_fin);
-        $("#fecha_fin").prop('disabled', true);
+        $("#fechas").val(data.fecha_inicio+' - '+data.fecha_fin);
+        $("#fechas").prop('disabled', true);
 
         $("#comentario").val(data.comentario);
         $("#comentario").prop('disabled', true);
@@ -189,37 +189,71 @@ function anular(idreserva) {
 }
 
 function formato_imputs() {
-    var date = new Date();
-    var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-    // Documentación: http://api.jqueryui.com/datepicker/
-    $("#fecha_inicio, #fecha_fin").datepicker({
-        closeText: 'Cerrar',
-        prevText: '<Ant',
-        nextText: 'Sig>',
-        currentText: 'Hoy',
-        monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-        monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
-        dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
-        dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Juv', 'Vie', 'Sáb'],
-        dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
-        weekHeader: 'Sm',
-        dateFormat: 'yy/mm/dd',
-        firstDay: 1,
-        isRTL: false,
-        showMonthAfterYear: false,
-        yearSuffix: '',
-        buttonImageOnly: true,
-        navigationAsDateFormat: true,
-        minDate: today
+
+    $(function () {
+        var date = new Date();
+        var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+        var f_inicio, f_fin;
+        $('input[name="fechas"]').daterangepicker({
+            autoUpdateInput: false,
+            minDate: today,
+            locale: {
+                "separator": " - ",
+                "applyLabel": "Aplicar",
+                "cancelLabel": "Cancelar",
+                "fromLabel": "DE",
+                "toLabel": "HASTA",
+                "customRangeLabel": "Custom",
+                "daysOfWeek": [
+                    "Dom",
+                    "Lun",
+                    "Mar",
+                    "Mie",
+                    "Jue",
+                    "Vie",
+                    "Sáb"
+                ],
+                "monthNames": [
+                    "Enero",
+                    "Febrero",
+                    "Marzo",
+                    "Abril",
+                    "Mayo",
+                    "Junio",
+                    "Julio",
+                    "Agosto",
+                    "Septiembre",
+                    "Octubre",
+                    "Noviembre",
+                    "Diciembre"
+                ],
+                "firstDay": 1,
+                cancelLabel: 'Cerrar'
+            }
+        });
+
+        $('input[name="fechas"]').on('apply.daterangepicker', function (ev, picker) {
+            f_inicio = picker.startDate.format('YYYY/MM/DD');
+            f_fin = picker.endDate.format('YYYY/MM/DD');
+            $(this).val(f_inicio + ' - ' + f_fin);
+            $("#fecha_inicio").val(f_inicio);
+            $("#fecha_fin").val(f_fin);
+            console.log("Fecha fin: ", f_inicio, "Fecha fin: ", f_fin);
+        });
+
+        $('input[name="fechas"]').on('cancel.daterangepicker', function (ev, picker) {
+            $(this).val('');
+        });
+
+
     });
 
     $("#idhabitacion, #idhuesped").selectpicker({
         noneSelectedText: 'Seleccionar una opción',
         noneResultsText: 'No exite resultados'
-
-
     });
 }
 
+//Función que se ejecuta al inicio de la app
 init();
 

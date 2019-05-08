@@ -57,13 +57,15 @@ require 'header.php';
 
                             </div>
                             <div class="col mb-3">
-                                <label>Fecha Inicio</label>
-                                <input type="text" class="form-control" name="fecha_inicio" id="fecha_inicio" required>
+                                <label>Rango de fechas</label>
+                                <input type="text" class="form-control" name="fechas" id="fechas" required>
+                                <input type="hidden" name="fecha_inicio" id="fecha_inicio">
+                                <input type="hidden" name="fecha_fin" id="fecha_fin">
                             </div>
-                            <div class="col mb-3">
-                                <label>Fecha Fin</label>
-                                <input type="text" class="form-control" name="fecha_fin" id="fecha_fin" required>
-                            </div>
+<!--                            <div class="col mb-3">-->
+<!--                                <label>Fecha Fin</label>-->
+<!--                                <input type="text" class="form-control" name="fecha_fin" id="fecha_fin" required>-->
+<!--                            </div>-->
                         </div>
 
                         <div class="row">

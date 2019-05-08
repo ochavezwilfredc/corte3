@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+
+</head>
+<body>
+<input type="text" name="fechas" value=""/>
+
+<script type="text/javascript">
+    $(function () {
+        var date = new Date();
+        var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+        var f_inicio, f_fin;
+        $('input[name="fechas"]').daterangepicker({
+            autoUpdateInput: false,
+            minDate: today,
+            locale: {
+                "separator": " - ",
+                "applyLabel": "Aplicar",
+                "cancelLabel": "Cancelar",
+                "fromLabel": "DE",
+                "toLabel": "HASTA",
+                "customRangeLabel": "Custom",
+                "daysOfWeek": [
+                    "Dom",
+                    "Lun",
+                    "Mar",
+                    "Mie",
+                    "Jue",
+                    "Vie",
+                    "Sáb"
+                ],
+                "monthNames": [
+                    "Enero",
+                    "Febrero",
+                    "Marzo",
+                    "Abril",
+                    "Mayo",
+                    "Junio",
+                    "Julio",
+                    "Agosto",
+                    "Septiembre",
+                    "Octubre",
+                    "Noviembre",
+                    "Diciembre"
+                ],
+                "firstDay": 1,
+                cancelLabel: 'Cerrar'
+            }
+        });
+
+        $('input[name="fechas"]').on('apply.daterangepicker', function (ev, picker) {
+            f_inicio = picker.startDate.format('YYYY/MM/DD');
+            f_fin = picker.endDate.format('YYYY/MM/DD');
+            $(this).val(f_inicio + ' - ' + f_fin);
+            console.log("Fecha fin: ", f_inicio, "Fecha fin: ", f_fin);
+        });
+
+        $('input[name="fechas"]').on('cancel.daterangepicker', function (ev, picker) {
+            $(this).val('');
+        });
+
+
+    });
+</script>
+</body>
+</html>
