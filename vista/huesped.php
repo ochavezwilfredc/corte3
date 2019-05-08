@@ -42,34 +42,34 @@ require 'header.php';
                 <div class="needs-validation">
                     <form name="formulario" id="formulario" method="POST">
                         <div class="row">
-                            <div class="col-md-4 mb-3">
+                            <div class="col mb-3">
                                 <label>Nombre</label>
                                 <input type="hidden" name="idhuesped" id="idhuesped">
                                 <input type="text" class="form-control" name="nombre" maxlength="100" id="nombre"
                                        placeholder=""
                                        value="" required>
                             </div>
-                            <div class="col-md-4 mb-3">
+                            <div class="col mb-3">
                                 <label>Cédula</label>
                                 <input type="text" class="form-control" maxlength="10" name="cedula" id="cedula"
                                        placeholder="" value=""
                                        required>
                             </div>
-                            <div class="col-md-4 mb-3">
+                            <div class="col mb-3">
                                 <label>Teléfono</label>
                                 <input type="text" class="form-control" maxlength="15" name="telefono" id="telefono"
                                        placeholder="" value="" required>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6 mb-3">
+                            <div class="col mb-3">
                                 <label>Email</label>
                                 <input type="email" class="form-control" maxlength="50" name="email" id="email"
                                        placeholder=""
                                        value="" required>
                             </div>
 
-                            <div class="col-md-6 mb-3">
+                            <div class="col mb-3">
                                 <label>Dirección</label>
                                 <input type="text" class="form-control" name="direccion" id="direccion"
                                        placeholder="" value="">
@@ -77,7 +77,7 @@ require 'header.php';
                         </div>
 
 
-                        <div class="col-md-12 mb-3">
+                        <div class="col mb-3">
                             <button class="btn btn-primary btn-sm" type="submit" id="btnGuardar"><i
                                         class="fa fa-save"></i>
                                 Guardar

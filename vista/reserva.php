@@ -38,48 +38,50 @@ require 'header.php';
         </div>
     </div>
 
-    <div class="row card-deck mb-12" id="formularioregistros">
-        <div class="card mb-12">
+    <div class="container card-deck mb-12">
+        <div class="row card mb-12" id="formularioregistros">
             <div class="card-header">
                 <h4 class="my-0 font-weight-normal titulo">Nueva Reserva</h4>
                 <br>
                 <div class="needs-validation">
                     <form name="formulario" id="formulario" method="POST">
                         <div class="row">
-                            <div class="col-4 mb-3">
+                            <div class="col mb-3">
                                 <label>Huésped</label>
                                 <input type="hidden" name="idreserva" id="idreserva">
-                                <button type="button" class="btn btn-sm btn-link" data-toggle="modal" data-target=".bd-example-modal-lg">Seleccionar</button>
+                                <button type="button" class="btn btn-sm btn-link" data-toggle="modal"
+                                        data-target=".bd-example-modal-lg" id="btnseleccionar">Seleccionar
+                                </button>
                                 <input type="hidden" name="idhuesped" id="idhuesped">
                                 <input type="text" class="form-control" name="nombre" id="nombre" required>
 
                             </div>
-                            <div class="col-4 mb-3">
+                            <div class="col mb-3">
                                 <label>Fecha Inicio</label>
                                 <input type="text" class="form-control" name="fecha_inicio" id="fecha_inicio" required>
                             </div>
-                            <div class="col-4 mb-3">
+                            <div class="col mb-3">
                                 <label>Fecha Fin</label>
                                 <input type="text" class="form-control" name="fecha_fin" id="fecha_fin" required>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-4 mb-3">
+                            <div class="col mb-3">
                                 <label>Habitación</label>
                                 <select id="idhabitacion" name="idhabitacion" class="form-control selectpicker"
                                         data-live-search="true" data-style="btn-info" required>
                                 </select>
 
                             </div>
-                            <div class="col-8 mb-3">
+                            <div class="col mb-3">
                                 <label>Comentario</label>
                                 <input type="text" class="form-control" name="comentario" id="comentario" required>
                             </div>
 
                         </div>
                         <br>
-                        <div class="col-12 mb-3">
+                        <div class="col mb-3">
                             <button class="btn btn-primary btn-sm" type="submit" id="btnGuardar"><i
                                         class="fa fa-save"></i>
                                 Guardar

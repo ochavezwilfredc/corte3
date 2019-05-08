@@ -10,16 +10,12 @@ function init() {
         insertar(e);
     });
 
-    //Cargamos los items al select habitaciones
+    // Cargamos los items al select habitaciones
     $.post("../controlador/reserva.php?opc=selectHabitaciones", function (r) {
         $("#idhabitacion").html(r);
         $('#idhabitacion').selectpicker('refresh');
     });
 
-    $.post("../controlador/reserva.php?opc=selectHuespedes", function (r) {
-        $("#idhuesped").html(r);
-        $('#idhuesped').selectpicker('refresh');
-    });
 
 }
 
@@ -31,6 +27,9 @@ function limpiar() {
     $("#idhabitacion").val("");
     $("#comentario").val("");
     $("#idhuesped").val("");
+    $("#nombre").val("");
+    $("#btnseleccionar").show();
+
 }
 
 //Función mostrar formulario
@@ -165,11 +164,13 @@ function mostrar(idreserva) {
         $("#comentario").prop('disabled', true);
 
         $("#idhuesped").val(data.idhuesped);
-        // $("#idhuesped").selectpicker('refresh');
         $("#idhuesped").prop('disabled', true);
 
+        $("#nombre").val(data.hue_nombre);
+        $("#nombre").prop('disabled', true);
 
         //Ocultar y mostrar los botones
+        $("#btnseleccionar").hide();
         $("#btnGuardar").hide();
         $("#btnCancelar").show();
     });

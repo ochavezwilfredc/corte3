@@ -57,31 +57,31 @@ require 'header.php';
                 <div class="needs-validation">
                     <form name="formulario" id="formulario" method="POST">
                         <div class="row">
-                            <div class="col-md-4 mb-3">
+                            <div class="col mb-3">
                                 <label>Número</label>
                                 <input type="hidden" name="idhabitacion" id="idhabitacion">
                                 <input type="text" class="form-control" name="numero" maxlength="10" id="numero"
                                        placeholder=""
                                        value="" required>
                             </div>
-                            <div class="col-md-4 mb-3">
+                            <div class="col mb-3">
                                 <label>Piso</label>
                                 <input type="number" class="form-control" name="piso" id="piso" placeholder="" value=""
                                        required>
                             </div>
-                            <div class="col-md-4 mb-3">
+                            <div class="col mb-3">
                                 <label>Máximo de personas</label>
                                 <input type="text" class="form-control" name="max_personas" id="max_personas"
                                        placeholder="" value="" required>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-4 mb-3">
+                            <div class="col mb-3">
                                 <label>Costo</label>
                                 <input type="number" class="form-control" name="costo" id="costo" placeholder=""
                                        value="" required>
                             </div>
-                            <div class="col-md-4 mb-3">
+                            <div class="col mb-3">
                                 <label>Tiene cama para bebe</label>
                                 <select class="custom-select d-block w-100" name="tiene_cama_bebe" id="tiene_cama_bebe"
                                         required>
@@ -90,7 +90,7 @@ require 'header.php';
                                 </select>
                             </div>
 
-                            <div class="col-md-4 mb-3">
+                            <div class="col mb-3">
                                 <label>Descripción</label>
                                 <input type="text" class="form-control" name="descripcion" id="descripcion"
                                        placeholder="" value="">
@@ -98,7 +98,7 @@ require 'header.php';
                         </div>
 
 
-                        <div class="col-md-12 mb-3">
+                        <div class="col mb-3">
                             <button class="btn btn-primary btn-sm" type="submit" id="btnGuardar"><i
                                         class="fa fa-save"></i>
                                 Guardar

@@ -8,12 +8,13 @@ class Conectar
     private $db_username = "root";
     private $db_password = "";
     private $db_encode = "utf8";
+    private $db_purto = "8889";
     protected $conexion;
 
     protected function conexion()
     {
         try {
-            $conectar = $this->conexion = new PDO("mysql:local=$this->db_host;dbname=$this->db_name", $this->db_username, $this->db_password);
+            $conectar = $this->conexion = new PDO("mysql:local=$this->db_host;dbname=$this->db_name; port=$this->db_purto", $this->db_username, $this->db_password);
             return $conectar;
         } catch (Exception $e) {
             print "¡Error!: " . $e->getMessage() . "<br/>";

@@ -81,7 +81,7 @@ switch ($_GET["opc"]) {
                 "2" => $hue["telefono"],
                 "3" => $hue["email"],
                 "4" => $hue["direccion"],
-                "5" => '<button class="btn btn-sm btn-sm text-primary"  data-dismiss="modal" aria-hidden="true"
+                "5" => '<button class="btn btn-sm btn-sm text-primary justify-content-center"  data-dismiss="modal" aria-hidden="true"
                     onclick="agregarHuesped(' . $hue["idhuesped"] . ',\'' . $hue["nombre"] . '\')">
                     <i class=" text-success fas fa-user-plus"></i>
                     </button>');
