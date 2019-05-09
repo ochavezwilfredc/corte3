@@ -33,7 +33,7 @@ switch ($_GET["opc"]) {
                 "2" => $hue["telefono"],
                 "3" => $hue["email"],
                 "4" => $hue["direccion"],
-                "5" => '<button class="btn btn-sm btn-sm text-primary" onclick="mostrar(' . $hue["idhuesped"] . ')"><i class="fas fa-edit"></i></button>' .
+                "5" => '<button class="btn btn-sm btn-sm text-success" onclick="mostrar(' . $hue["idhuesped"] . ')"><i class="fas fa-edit"></i></button>' .
                     ' <button class="btn btn-sm btn-sm text-danger" onclick="eliminar(' . $hue["idhuesped"] . ')"><i class="fas fa-trash"></i></button>'
             );
         }

@@ -62,19 +62,17 @@ require 'header.php';
                                 <input type="hidden" name="fecha_inicio" id="fecha_inicio">
                                 <input type="hidden" name="fecha_fin" id="fecha_fin">
                             </div>
-<!--                            <div class="col mb-3">-->
-<!--                                <label>Fecha Fin</label>-->
-<!--                                <input type="text" class="form-control" name="fecha_fin" id="fecha_fin" required>-->
-<!--                            </div>-->
                         </div>
 
                         <div class="row">
                             <div class="col mb-3">
                                 <label>Habitación</label>
-                                <select id="idhabitacion" name="idhabitacion" class="form-control selectpicker"
-                                        data-live-search="true" data-style="btn-info" required>
-                                </select>
-
+                                <input type="hidden" class="form-control" name="numero" id="numero">
+                                <div id="cont_select">
+                                    <select id="idhabitacion" name="idhabitacion" class="form-control selectpicker"
+                                            data-live-search="true" data-style="btn-info" required>
+                                    </select>
+                                </div>
                             </div>
                             <div class="col mb-3">
                                 <label>Comentario</label>

@@ -22,13 +22,18 @@ function init() {
 function limpiar() {
     $("#idreserva").val("");
     $("#fechas").val("");
-    $("#fechas").val("");
     $("#idhabitacion").val("");
     $("#comentario").val("");
     $("#idhuesped").val("");
     $("#nombre").val("");
     $("#btnseleccionar").show();
 
+    // Habilitar los inputs
+    $("#idhabitacion").prop('disabled', false);
+    $("#fechas").prop('disabled', false);
+    $("#comentario").prop('disabled', false);
+    $("#idhuesped").prop('disabled', false);
+    $("#nombre").prop('disabled', false);
 }
 
 //Función mostrar formulario
@@ -37,14 +42,16 @@ function mostrarform(flag) {
     if (flag) {
         $("#listadoregistros").hide(); //ocultar
         $("#formularioregistros").show(); // mostrar
-        $("#btnGuardar").prop("disabled", false);
         $("#btnagregar").hide();
         listarHuespedes();
-        // validar_fechas();
     } else {
         $("#listadoregistros").show(); //mostrar
         $("#formularioregistros").hide(); //ocultar
         $("#btnagregar").show();
+        $("#btnGuardar").show();
+        $("#cont_select").show();
+        $("#numero").get(0).type = 'hidden';
+
     }
 
 }
@@ -99,7 +106,16 @@ function insertar(e) {
         processData: false,
 
         success: function (datos) {
-            bootbox.alert(datos);
+            bootbox.alert({
+                message: datos,
+                locale: 'es',
+                buttons: {
+                    ok: {
+                        label: '<i class="fa fa-check"></i> Aceptar',
+                        className: 'btn-primary'
+                    }
+                },
+            });
             mostrarform(false);
             listar();
         }
@@ -144,20 +160,19 @@ function agregarHuesped(idhuesped, nombre) {
 }
 
 function mostrar(idreserva) {
-    // console.log(idreserva);
     $.post("../controlador/reserva.php?opc=mostrar", {idreserva: idreserva}, function (data, status) {
         data = JSON.parse(data);
         mostrarform(true);
 
         $("#idreserva").val(data.idreserva);
-        $("#idhabitacion").val(data.idhabitacion);
-        $("#idhabitacion").selectpicker('refresh');
-        $("#idhabitacion").prop('disabled', true);
 
-        $("#fechas").val(data.fechas);
-        $("#fechas").prop('disabled', true);
+        $("#numero").get(0).type = 'text';
+        $("#numero").val(data.hab_num);
+        $("#numero").prop('disabled', true);
 
-        $("#fechas").val(data.fecha_inicio+' - '+data.fecha_fin);
+        $("#cont_select").hide();
+
+        $("#fechas").val(data.fecha_inicio + ' - ' + data.fecha_fin);
         $("#fechas").prop('disabled', true);
 
         $("#comentario").val(data.comentario);
@@ -174,18 +189,43 @@ function mostrar(idreserva) {
         $("#btnGuardar").hide();
         $("#btnCancelar").show();
     });
+
 }
 
 //Función para anular registros
 function anular(idreserva) {
-    bootbox.confirm("¿Está Seguro de anular el reserva?", function (result) {
-        if (result) {
-            $.post("../controlador/reserva.php?opc=anular", {idreserva: idreserva}, function (e) {
-                bootbox.alert(e);
-                tabla.ajax.reload();
-            });
+    bootbox.confirm({
+        message: "¿Está Seguro de anular el reserva?",
+        buttons: {
+            confirm: {
+                label: 'Si',
+                className: 'btn-success'
+            },
+            cancel: {
+                label: 'No',
+                className: 'btn-danger'
+            }
+        },
+        callback: function (result) {
+            if (result) {
+                $.post("../controlador/reserva.php?opc=anular", {
+                    idreserva: idreserva
+                }, function (e) {
+                    bootbox.alert({
+                        message: e,
+                        locale: 'es',
+                        buttons: {
+                            ok: {
+                                label: '<i class="fa fa-check"></i> Aceptar',
+                                className: 'btn-primary'
+                            }
+                        },
+                    });
+                    tabla.ajax.reload();
+                });
+            }
         }
-    })
+    });
 }
 
 function formato_imputs() {

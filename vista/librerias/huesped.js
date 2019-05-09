@@ -76,7 +76,16 @@ function insertar_o_editar(e) {
         contentType: false,
         processData: false,
         success: function (datos) {
-            bootbox.alert(datos);
+            bootbox.alert({
+                message: datos,
+                locale: 'es',
+                buttons: {
+                    ok: {
+                        label: '<i class="fa fa-check"></i> Aceptar',
+                        className: 'btn-primary'
+                    }
+                },
+            });
             mostrarform(false);
             tabla.ajax.reload();
         }
@@ -101,16 +110,38 @@ function mostrar(idhuesped) {
 }
 
 function eliminar(idhuesped) {
-    bootbox.confirm("¿Está seguro de eliminar la habitación?", function (result) {
-        if (result) {
-            $.post("../controlador/huesped.php?opc=eliminar", {
-                idhuesped: idhuesped
-            }, function (e) {
-                bootbox.alert(e);
-                tabla.ajax.reload();
-            });
+    bootbox.confirm({
+        message: "¿Está seguro de eliminar el huésped?",
+        buttons: {
+            confirm: {
+                label: 'Si',
+                className: 'btn-success'
+            },
+            cancel: {
+                label: 'No',
+                className: 'btn-danger'
+            }
+        },
+        callback: function (result) {
+            if (result) {
+                $.post("../controlador/huesped.php?opc=eliminar", {
+                    idhuesped: idhuesped
+                }, function (e) {
+                    bootbox.alert({
+                        message: e,
+                        locale: 'es',
+                        buttons: {
+                            ok: {
+                                label: '<i class="fa fa-check"></i> Aceptar',
+                                className: 'btn-primary'
+                            }
+                        },
+                    });
+                    tabla.ajax.reload();
+                });
+            }
         }
-    })
+    });
 }
 
 

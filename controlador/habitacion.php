@@ -36,7 +36,7 @@ switch ($_GET["opc"]) {
                 "3" => $hab["costo"],
                 "4" => $opcbebe,
                 "5" => $hab["descripcion"],
-                "6" => '<button class="btn btn-sm text-primary" onclick="mostrar(' . $hab["idhabitacion"] . ')"><i class="fas fa-edit"></i></button>' .
+                "6" => '<button class="btn btn-sm text-success" onclick="mostrar(' . $hab["idhabitacion"] . ')"><i class="fas fa-edit"></i></button>' .
                     ' <button class="btn btn-sm text-danger" onclick="eliminar(' . $hab["idhabitacion"] . ')"><i class="fas fa-trash"></i></button>'
             );
         }

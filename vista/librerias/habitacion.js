@@ -78,7 +78,16 @@ function insertar_o_editar(e) {
         contentType: false,
         processData: false,
         success: function (datos) {
-            bootbox.alert(datos);
+            bootbox.alert({
+                message: datos,
+                locale: 'es',
+                buttons: {
+                    ok: {
+                        label: '<i class="fa fa-check"></i> Aceptar',
+                        className: 'btn-primary'
+                    }
+                },
+            });
             mostrarform(false);
             tabla.ajax.reload();
         }
@@ -89,8 +98,7 @@ function insertar_o_editar(e) {
 
 // DOC: https://www.w3schools.com/jquery/ajax_post.asp
 function mostrar(idhabitacion) {
-    $.post("../controlador/habitacion.php?opc=mostrar", {idhabitacion: idhabitacion}, function (data, status)
-    {
+    $.post("../controlador/habitacion.php?opc=mostrar", {idhabitacion: idhabitacion}, function (data, status) {
         data = JSON.parse(data);
         // console.log(data.toString());
         mostrarform(true);
@@ -106,16 +114,38 @@ function mostrar(idhabitacion) {
 }
 
 function eliminar(idhabitacion) {
-    bootbox.confirm("¿Está seguro de eliminar la habitación?", function (result) {
-        if (result) {
-            $.post("../controlador/habitacion.php?opc=eliminar", {
-                idhabitacion: idhabitacion
-            }, function (e) {
-                bootbox.alert(e);
-                tabla.ajax.reload();
-            });
+    bootbox.confirm({
+        message: "¿Está seguro de eliminar la habitación?",
+        buttons: {
+            confirm: {
+                label: 'Si',
+                className: 'btn-success'
+            },
+            cancel: {
+                label: 'No',
+                className: 'btn-danger'
+            }
+        },
+        callback: function (result) {
+            if (result) {
+                $.post("../controlador/habitacion.php?opc=eliminar", {
+                    idhabitacion: idhabitacion
+                }, function (e) {
+                    bootbox.alert({
+                        message: e,
+                        locale: 'es',
+                        buttons: {
+                            ok: {
+                                label: '<i class="fa fa-check"></i> Aceptar',
+                                className: 'btn-primary'
+                            }
+                        },
+                    });
+                    tabla.ajax.reload();
+                });
+            }
         }
-    })
+    });
 }
 
 
