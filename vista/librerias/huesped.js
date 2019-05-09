@@ -16,6 +16,8 @@ function limpiar() {
     $("#telefono").val("");
     $("#email").val("");
     $("#direccion").val("");
+    $("h4.titulohuesped").text("Nuevo Huésped");
+
 }
 
 function mostrarform(flag) {
@@ -105,6 +107,7 @@ function mostrar(idhuesped) {
         $("#email").val(data.email);
         $("#direccion").val(data.direccion);
         $("#idhuesped").val(data.idhuesped);
+        $("h4.titulohuesped").text("Editar Huésped");
 
     })
 }

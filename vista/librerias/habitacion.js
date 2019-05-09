@@ -17,6 +17,8 @@ function limpiar() {
     $("#costo").val("");
     $("#tiene_cama_bebe").val("");
     $("#descripcion").val("");
+    $("h4.titulohabitacion").text("Nueva Habitación");
+
 
 }
 
@@ -100,7 +102,6 @@ function insertar_o_editar(e) {
 function mostrar(idhabitacion) {
     $.post("../controlador/habitacion.php?opc=mostrar", {idhabitacion: idhabitacion}, function (data, status) {
         data = JSON.parse(data);
-        // console.log(data.toString());
         mostrarform(true);
         $("#numero").val(data.numero);
         $("#piso").val(data.piso);
@@ -109,7 +110,8 @@ function mostrar(idhabitacion) {
         $("#tiene_cama_bebe").val(data.tiene_cama_bebe);
         $("#descripcion").val(data.descripcion);
         $("#idhabitacion").val(data.idhabitacion);
-
+        // $("#titulohabitacion").text("Editar Habitación");
+        $("h4.titulohabitacion").text("Editar Habitación");
     })
 }
 

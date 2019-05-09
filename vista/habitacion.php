@@ -52,7 +52,7 @@ require 'header.php';
     <div class="row card-deck mb-12" id="formularioregistros">
         <div class="card mb-12">
             <div class="card-header">
-                <h4 class="my-0 font-weight-normal titulo">Nueva Habitación</h4>
+                <h4 class="my-0 font-weight-normal titulo titulohabitacion">Nueva Habitación</h4>
                 <br>
                 <div class="needs-validation">
                     <form name="formulario" id="formulario" method="POST">

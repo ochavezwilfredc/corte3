@@ -41,7 +41,7 @@ require 'header.php';
     <div class="container card-deck mb-12">
         <div class="row card mb-12" id="formularioregistros">
             <div class="card-header">
-                <h4 class="my-0 font-weight-normal titulo">Nueva Reserva</h4>
+                <h4 class="my-0 font-weight-normal titulo tituloreserva">Nueva Reserva</h4>
                 <br>
                 <div class="needs-validation">
                     <form name="formulario" id="formulario" method="POST">
@@ -49,9 +49,9 @@ require 'header.php';
                             <div class="col mb-3">
                                 <label>Huésped</label>
                                 <input type="hidden" name="idreserva" id="idreserva">
-                                <button type="button" class="btn btn-sm btn-link" data-toggle="modal"
-                                        data-target=".bd-example-modal-lg" id="btnseleccionar">Seleccionar
-                                </button>
+<!--                                <button type="button" class="btn btn-sm btn-link" data-toggle="modal"-->
+<!--                                        data-target=".bd-example-modal-lg" id="btnseleccionar">Seleccionar-->
+<!--                                </button>-->
                                 <input type="hidden" name="idhuesped" id="idhuesped">
                                 <input type="text" class="form-control" name="nombre" id="nombre" required>
 

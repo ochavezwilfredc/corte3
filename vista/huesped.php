@@ -37,7 +37,7 @@ require 'header.php';
     <div class="row card-deck mb-12" id="formularioregistros">
         <div class="card mb-12">
             <div class="card-header">
-                <h4 class="my-0 font-weight-normal titulo">Nuevo Huésped</h4>
+                <h4 class="my-0 font-weight-normal titulo titulohuesped">Nuevo Huésped</h4>
                 <br>
                 <div class="needs-validation">
                     <form name="formulario" id="formulario" method="POST">
@@ -49,7 +49,7 @@ require 'header.php';
                                        placeholder=""
                                        value="" required>
                             </div>
-                            <div class="col mb-3">
+                            <div claass="col mb-3">
                                 <label>Cédula</label>
                                 <input type="text" class="form-control" maxlength="10" name="cedula" id="cedula"
                                        placeholder="" value=""

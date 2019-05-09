@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efda2fab-e383-440e-b2e6-dacc9ca865d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursos/js/bootbox/bootbox.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controlador/habitacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/habitacion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controlador/huesped.php" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/huesped.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controlador/test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelo/Conectar.php" beforeDir="false" afterPath="$PROJECT_DIR$/modelo/Conectar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vista/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vista/habitacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/habitacion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/huesped.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/huesped.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vista/librerias/habitacion.js" beforeDir="false" afterPath="$PROJECT_DIR$/vista/librerias/habitacion.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vista/librerias/huesped.js" beforeDir="false" afterPath="$PROJECT_DIR$/vista/librerias/huesped.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vista/librerias/reserva.js" beforeDir="false" afterPath="$PROJECT_DIR$/vista/librerias/reserva.js" afterDir="false" />
@@ -64,7 +62,58 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vista/habitacion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="54" column="74" selection-start-line="54" selection-start-column="74" selection-end-line="54" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vista/librerias/habitacion.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vista/librerias/huesped.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1744">
+              <caret line="109" column="42" selection-start-line="109" selection-start-column="42" selection-end-line="109" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vista/librerias/reserva.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="298" column="25" selection-start-line="298" selection-start-column="25" selection-end-line="298" selection-end-column="25" />
+              <folding>
+                <element signature="n#!!block;n#listar#0" />
+                <element signature="n#!!block;n#listarHuespedes#0" />
+                <element signature="n#!!block;n#anular#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vista/reserva.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="105" column="35" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -77,8 +126,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>costo</find>
-      <find>direccion</find>
       <find>$hue</find>
       <find>$huesp</find>
       <find>$hab-&gt;</find>
@@ -107,6 +154,8 @@
       <find>mostrar</find>
       <find>btnagregar</find>
       <find>boo</find>
+      <find>h4</find>
+      <find>btnseleccionar</find>
     </findStrings>
     <replaceStrings>
       <replace>Habitacion</replace>
@@ -178,22 +227,22 @@
         <option value="$PROJECT_DIR$/controlador/test.php" />
         <option value="$PROJECT_DIR$/modelo/Reserva.php" />
         <option value="$PROJECT_DIR$/recursos/css/estilos.css" />
-        <option value="$PROJECT_DIR$/modelo/Conectar.php" />
-        <option value="$PROJECT_DIR$/vista/huesped.php" />
         <option value="$PROJECT_DIR$/recursos/js/validarFechas.js" />
         <option value="$PROJECT_DIR$/vista/test.html" />
-        <option value="$PROJECT_DIR$/vista/header.php" />
         <option value="$PROJECT_DIR$/controlador/reserva.php" />
-        <option value="$PROJECT_DIR$/vista/reserva.php" />
-        <option value="$PROJECT_DIR$/vista/librerias/habitacion.js" />
-        <option value="$PROJECT_DIR$/vista/librerias/huesped.js" />
-        <option value="$PROJECT_DIR$/vista/librerias/reserva.js" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/47e1f50e-68fa-419e-b38a-dfe7ba51128a/console.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/vista/habitacion.php" />
         <option value="$PROJECT_DIR$/controlador/habitacion.php" />
         <option value="$PROJECT_DIR$/controlador/huesped.php" />
+        <option value="$PROJECT_DIR$/modelo/Conectar.php" />
+        <option value="$PROJECT_DIR$/vista/header.php" />
         <option value="$PROJECT_DIR$/vista/footer.php" />
+        <option value="$PROJECT_DIR$/vista/habitacion.php" />
+        <option value="$PROJECT_DIR$/vista/librerias/habitacion.js" />
+        <option value="$PROJECT_DIR$/vista/huesped.php" />
+        <option value="$PROJECT_DIR$/vista/librerias/huesped.js" />
+        <option value="$PROJECT_DIR$/vista/reserva.php" />
+        <option value="$PROJECT_DIR$/vista/librerias/reserva.js" />
       </list>
     </option>
   </component>
@@ -361,18 +410,20 @@
       <workItem from="1557383595344" duration="70000" />
       <workItem from="1557383736353" duration="154000" />
       <workItem from="1557410645375" duration="5036000" />
+      <workItem from="1557417491858" duration="10257000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141096000" />
+    <option name="totallyTimeSpent" value="151353000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="735" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.26963747" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.2734139" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -490,35 +541,7 @@
     <entry file="file://$PROJECT_DIR$/controlador/test.php" />
     <entry file="file://$PROJECT_DIR$/test.js" />
     <entry file="file://$PROJECT_DIR$/test.html" />
-    <entry file="file://$PROJECT_DIR$/modelo/Reserva.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="74" column="28" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modelo/Huesped.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vista/huesped.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="64" column="43" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recursos/js/validarFechas.js" />
-    <entry file="file://$PROJECT_DIR$/vista/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="928">
-          <caret line="58" column="14" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vista/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
@@ -526,20 +549,6 @@
           <folding>
             <element signature="e#1112#2183#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vista/reserva.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="69" column="51" selection-start-line="69" selection-start-column="45" selection-end-line="69" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modelo/Conectar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -575,28 +584,7 @@
             <Category>Key columns</Category>
             <Category>Columns</Category>
           </Categories>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vista/librerias/huesped.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="87" column="15" lean-forward="true" selection-start-line="78" selection-start-column="12" selection-end-line="87" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vista/librerias/reserva.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="225" column="13" lean-forward="true" selection-start-line="225" selection-start-column="13" selection-end-line="225" selection-end-column="13" />
-          <folding>
-            <element signature="n#!!block;n#limpiar#0" />
-            <element signature="n#!!block;n#listar#0" />
-            <element signature="n#!!block;n#listarHuespedes#0" />
-            <element signature="n#!!block;n#agregarHuesped#0" />
-            <element signature="n#!!block;n#mostrar#0" />
-            <element signature="n#!!block;n#formato_imputs#0" />
-          </folding>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -607,58 +595,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vista/habitacion.php">
+    <entry file="file://$PROJECT_DIR$/recursos/js/bootbox/bootbox.min.js" />
+    <entry file="file://$PROJECT_DIR$/modelo/Conectar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="85" column="32" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
+        <state relative-caret-position="240">
+          <caret line="15" column="50" lean-forward="true" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modelo/Habitacion.php">
+    <entry file="file://$PROJECT_DIR$/modelo/Huesped.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="63" column="28" lean-forward="true" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
+        <state relative-caret-position="160">
+          <caret line="10" column="5" lean-forward="true" selection-end-line="210" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vista/librerias/habitacion.js">
+    <entry file="file://$PROJECT_DIR$/modelo/Reserva.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="79" column="31" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
-          <folding>
-            <element signature="n#!!block;n#init#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/huesped.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-58">
-          <caret line="35" column="69" selection-start-line="35" selection-start-column="69" selection-end-line="35" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlador/reserva.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recursos/js/bootbox/bootbox.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vista/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="224">
+          <caret line="74" column="28" selection-end-line="295" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controlador/habitacion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="38" column="62" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="62" />
+        <state relative-caret-position="365">
+          <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modelo/Habitacion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2410">
+          <caret line="67" column="34" lean-forward="true" selection-end-line="247" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlador/huesped.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="42" column="35" lean-forward="true" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="40" selection-end-line="68" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/habitacion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="54" column="74" selection-start-line="54" selection-start-column="74" selection-end-line="54" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/librerias/habitacion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/librerias/huesped.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1744">
+          <caret line="109" column="42" selection-start-line="109" selection-start-column="42" selection-end-line="109" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/huesped.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="54" column="62" lean-forward="true" selection-start-line="54" selection-start-column="62" selection-end-line="54" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlador/reserva.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="83" column="56" selection-start-line="83" selection-start-column="54" selection-end-line="83" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/reserva.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="105" column="35" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/librerias/reserva.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="298" column="25" selection-start-line="298" selection-start-column="25" selection-end-line="298" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!block;n#listar#0" />
+            <element signature="n#!!block;n#listarHuespedes#0" />
+            <element signature="n#!!block;n#anular#0" />
+          </folding>
         </state>
       </provider>
     </entry>

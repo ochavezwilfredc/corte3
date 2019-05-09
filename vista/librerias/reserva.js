@@ -26,7 +26,7 @@ function limpiar() {
     $("#comentario").val("");
     $("#idhuesped").val("");
     $("#nombre").val("");
-    $("#btnseleccionar").show();
+    // $("#btnseleccionar").show();
 
     // Habilitar los inputs
     $("#idhabitacion").prop('disabled', false);
@@ -34,6 +34,9 @@ function limpiar() {
     $("#comentario").prop('disabled', false);
     $("#idhuesped").prop('disabled', false);
     $("#nombre").prop('disabled', false);
+
+    $("h4.tituloreserva").text("Nueva Reserva");
+
 }
 
 //Función mostrar formulario
@@ -95,7 +98,6 @@ function listar() {
 
 function insertar(e) {
     e.preventDefault(); //No se activará la acción predeterminada del evento
-    //$("#btnGuardar").prop("disabled",true);
     var formData = new FormData($("#formulario")[0]);
 
     $.ajax({
@@ -154,8 +156,6 @@ function agregarHuesped(idhuesped, nombre) {
     if (idhuesped != "") {
         $("#idhuesped").val(idhuesped);
         $("#nombre").val(nombre);
-
-        // $("#idhuesped").selectpicker('refresh');
     }
 }
 
@@ -184,8 +184,10 @@ function mostrar(idreserva) {
         $("#nombre").val(data.hue_nombre);
         $("#nombre").prop('disabled', true);
 
+        $("h4.tituloreserva").text("Reserva");
+
         //Ocultar y mostrar los botones
-        $("#btnseleccionar").hide();
+        // $("#btnseleccionar").hide();
         $("#btnGuardar").hide();
         $("#btnCancelar").show();
     });
@@ -285,7 +287,12 @@ function formato_imputs() {
             $(this).val('');
         });
 
-
+        $( "#nombre" ).click(function() {
+            $('#myModal').modal({
+                show:true,
+                backdrop:'static'
+            });
+        });
     });
 
     $("#idhabitacion, #idhuesped").selectpicker({
