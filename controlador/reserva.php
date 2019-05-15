@@ -83,7 +83,7 @@ switch ($_GET["opc"]) {
                 "4" => $hue["direccion"],
                 "5" => '<button class="btn btn-sm btn-sm text-primary justify-content-center"  data-dismiss="modal" aria-hidden="true"
                     onclick="agregarHuesped(' . $hue["idhuesped"] . ',\'' . $hue["nombre"] . '\')">
-                    <i class=" text-success fas fa-user-plus"></i>
+                    <p class=" text-primary titulo">elegir <i class=" text-primary fas fa-user-plus"></i></p>
                     </button>');
         }
         $results = array(
@@ -99,16 +99,9 @@ switch ($_GET["opc"]) {
         $habitacion = new Habitacion();
         $habitaciones = $habitacion->listar();
         foreach ($habitaciones as $hab) {
-            echo '<option data-icon="fas fa-door-open" value=' . $hab["idhabitacion"] . '>' . $hab["numero"] . '</option>';
-        }
-        break;
-
-    case 'selectHuespedes':
-        require_once "../modelo/Huesped.php";
-        $huesped = new Huesped();
-        $huespedes = $huesped->listar();
-        foreach ($huespedes as $hue) {
-            echo '<option data-icon="fas fa-user" value=' . $hue["idhuesped"] . '>' . $hue["nombre"] . '</option>';
+            echo '<option   data-icon="fas fa-door-open" 
+                            class = "titulo" 
+                            data-subtext=' . "$" . ceil($hab['costo']) . ' value=' . $hab["idhabitacion"] . '>' . $hab["numero"] . '</option>';
         }
         break;
 }

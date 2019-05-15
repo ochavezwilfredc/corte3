@@ -120,3 +120,4 @@ require 'header.php';
 require 'footer.php';
 ?>
 <script src="librerias/habitacion.js"></script>
+<script src="tsc/habitacion.js"></script>

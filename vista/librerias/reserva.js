@@ -28,7 +28,7 @@ function limpiar() {
     $("#nombre").val("");
     // $("#btnseleccionar").show();
 
-    // Habilitar los inputs
+    // Habilitar los inputsselectHabitaciones
     $("#idhabitacion").prop('disabled', false);
     $("#fechas").prop('disabled', false);
     $("#comentario").prop('disabled', false);
@@ -144,7 +144,7 @@ function listarHuespedes() {
                     }
                 },
             "bDestroy": true,
-            "iDisplayLength": 10,//Paginación
+            "iDisplayLength": 5,//Paginación
             "order": [[0, "desc"]],
             "language": {
                 "url": "https://cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json"

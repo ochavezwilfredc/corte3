@@ -1,3 +1,30 @@
+<!--<hr class="featurette-divider">-->
+
+<!-- Footer -->
+<footer class="page-footer font-small stylish-color-dark pt-4 titulo">
+<!--    <hr>-->
+    <!-- Social buttons -->
+    <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+            <img src="../recursos/img/ul.jpg"
+                 class="rounded mx-auto d-block"
+                 alt="Univesidad Libre"
+                 width="90"
+                 height="90">
+        </li>
+    </ul>
+    <!-- Social buttons -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+        <a href="http://www.unilibrecali.edu.co/"> Universidad Libre Seccional Cali</a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
 <!--    Jquery-->
 <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -31,6 +58,9 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+
+<!-- (Optional) Latest compiled and minified JavaScript translation files -->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/i18n/defaults-*.min.js"></script>-->
 
 <!--Fecha-->
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

@@ -49,9 +49,9 @@ require 'header.php';
                             <div class="col mb-3">
                                 <label>Huésped</label>
                                 <input type="hidden" name="idreserva" id="idreserva">
-<!--                                <button type="button" class="btn btn-sm btn-link" data-toggle="modal"-->
-<!--                                        data-target=".bd-example-modal-lg" id="btnseleccionar">Seleccionar-->
-<!--                                </button>-->
+                                <!--                                <button type="button" class="btn btn-sm btn-link" data-toggle="modal"-->
+                                <!--                                        data-target=".bd-example-modal-lg" id="btnseleccionar">Seleccionar-->
+                                <!--                                </button>-->
                                 <input type="hidden" name="idhuesped" id="idhuesped">
                                 <input type="text" class="form-control" name="nombre" id="nombre" required>
 
@@ -68,9 +68,14 @@ require 'header.php';
                             <div class="col mb-3">
                                 <label>Habitación</label>
                                 <input type="hidden" class="form-control" name="numero" id="numero">
-                                <div id="cont_select">
-                                    <select id="idhabitacion" name="idhabitacion" class="form-control selectpicker"
-                                            data-live-search="true" data-style="btn-info" required>
+                                <div id="cont_select" style="overflow:hidden;">
+                                    <select id="idhabitacion" name="idhabitacion"
+                                            class="form-control selectpicker show-tick small"
+                                            data-live-search="true"
+                                            data-style="btn-success"
+                                            data-container="body"
+                                            data-size="5"
+                                            required>
                                     </select>
                                 </div>
                             </div>
