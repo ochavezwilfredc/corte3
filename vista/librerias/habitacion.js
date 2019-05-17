@@ -2,7 +2,7 @@ var tabla;
 
 //Función que se ejecuta al inicio
 function init() {
-    mostrarform(false);
+    mostrarFormulario(false);
     listar();
     $("#formulario").on("submit", function (e) {
         insertar_o_editar(e);
@@ -22,7 +22,7 @@ function limpiar() {
 
 }
 
-function mostrarform(flag) {
+function mostrarFormulario(flag) {
     limpiar();
     if (flag) {
         $("#listadoregistros").hide(); //ocultar
@@ -36,9 +36,9 @@ function mostrarform(flag) {
     }
 }
 
-function cancelarform() {
+function cancelarFormulario() {
     limpiar();
-    mostrarform(false);
+    mostrarFormulario(false);
 }
 
 function listar() {
@@ -90,7 +90,7 @@ function insertar_o_editar(e) {
                     }
                 },
             });
-            mostrarform(false);
+            mostrarFormulario(false);
             tabla.ajax.reload();
         }
 
@@ -102,7 +102,7 @@ function insertar_o_editar(e) {
 function mostrar(idhabitacion) {
     $.post("../controlador/habitacion.php?opc=mostrar", {idhabitacion: idhabitacion}, function (data, status) {
         data = JSON.parse(data);
-        mostrarform(true);
+        mostrarFormulario(true);
         $("#numero").val(data.numero);
         $("#piso").val(data.piso);
         $("#max_personas").val(data.max_personas);

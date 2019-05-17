@@ -3,7 +3,7 @@ var tabla;
 //Función que se ejecuta al inicio
 function init() {
     formato_imputs();
-    mostrarform(false);
+    mostrarFormulario(false);
     listar();
 
     $("#formulario").on("submit", function (e) {
@@ -40,7 +40,7 @@ function limpiar() {
 }
 
 //Función mostrar formulario
-function mostrarform(flag) {
+function mostrarFormulario(flag) {
     limpiar();
     if (flag) {
         $("#listadoregistros").hide(); //ocultar
@@ -59,10 +59,10 @@ function mostrarform(flag) {
 
 }
 
-//Función cancelarform
-function cancelarform() {
+//Función cancelarFormulario
+function cancelarFormulario() {
     limpiar();
-    mostrarform(false);
+    mostrarFormulario(false);
 }
 
 //Función Listar
@@ -118,7 +118,7 @@ function insertar(e) {
                     }
                 },
             });
-            mostrarform(false);
+            mostrarFormulario(false);
             listar();
         }
 
@@ -162,7 +162,7 @@ function agregarHuesped(idhuesped, nombre) {
 function mostrar(idreserva) {
     $.post("../controlador/reserva.php?opc=mostrar", {idreserva: idreserva}, function (data, status) {
         data = JSON.parse(data);
-        mostrarform(true);
+        mostrarFormulario(true);
 
         $("#idreserva").val(data.idreserva);
 

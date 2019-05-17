@@ -23,7 +23,7 @@ require 'header.php';
             <div class="card-header">
                 <h4 class="my-0 font-weight-normal titulo">Habitaciones
                     <button type="button" class="btn btn-success btn-sm" id="btnagregar"
-                            onclick="mostrarform(true)"><i
+                            onclick="mostrarFormulario(true)"><i
                                 class="fa fa-plus-circle"></i> Agregar
                     </button>
                 </h4>
@@ -105,7 +105,7 @@ require 'header.php';
                                 Guardar
                             </button>
 
-                            <button class="btn btn-danger btn-sm" onclick="cancelarform()" type="button"><i
+                            <button class="btn btn-danger btn-sm" onclick="cancelarFormulario()" type="button"><i
                                         class="fa fa-arrow-circle-left"></i> Cancelar
                             </button>
                         </div>

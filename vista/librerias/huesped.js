@@ -2,7 +2,7 @@ var tabla;
 
 //Función que se ejecuta al inicio
 function init() {
-    mostrarform(false);
+    mostrarFormulario(false);
     listar();
     $("#formulario").on("submit", function (e) {
         insertar_o_editar(e);
@@ -20,7 +20,7 @@ function limpiar() {
 
 }
 
-function mostrarform(flag) {
+function mostrarFormulario(flag) {
     limpiar();
     if (flag) {
         $("#listadoregistros").hide(); //ocultar
@@ -34,9 +34,9 @@ function mostrarform(flag) {
     }
 }
 
-function cancelarform() {
+function cancelarFormulario() {
     limpiar();
-    mostrarform(false);
+    mostrarFormulario(false);
 }
 
 function listar() {
@@ -88,7 +88,7 @@ function insertar_o_editar(e) {
                     }
                 },
             });
-            mostrarform(false);
+            mostrarFormulario(false);
             tabla.ajax.reload();
         }
 
@@ -100,7 +100,7 @@ function mostrar(idhuesped) {
     console.log(idhuesped);
     $.post("../controlador/huesped.php?opc=mostrar", {idhuesped: idhuesped}, function (data, status) {
         data = JSON.parse(data);
-        mostrarform(true);
+        mostrarFormulario(true);
         $("#nombre").val(data.nombre);
         $("#cedula").val(data.cedula);
         $("#telefono").val(data.telefono);
