@@ -62,8 +62,8 @@
         <small>Aplicaciones de Internet</small>
     </h4>
     <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-dark titulo" href="habitacion.php">Habitaciones</a>
-        <a class="p-2 text-dark titulo" href="huesped.php">Huéspedes</a>
-        <a class="p-2 text-dark titulo" href="reserva.php">Reservas</a>
+        <a class="p-2 text-dark titulo" href="habitacion.php"><b>Habitaciones</b></a>
+        <a class="p-2 text-dark titulo" href="huesped.php"><b>Huéspedes</b></a>
+        <a class="p-2 text-dark titulo" href="reserva.php"><b>Reservas</b></a>
     </nav>
 </div>

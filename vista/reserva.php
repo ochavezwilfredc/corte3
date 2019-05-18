@@ -49,9 +49,6 @@ require 'header.php';
                             <div class="col mb-3">
                                 <label>Huésped</label>
                                 <input type="hidden" name="idreserva" id="idreserva">
-                                <!--                                <button type="button" class="btn btn-sm btn-link" data-toggle="modal"-->
-                                <!--                                        data-target=".bd-example-modal-lg" id="btnseleccionar">Seleccionar-->
-                                <!--                                </button>-->
                                 <input type="hidden" name="idhuesped" id="idhuesped">
                                 <input type="text" class="form-control" name="nombre" id="nombre" required>
 
@@ -87,13 +84,13 @@ require 'header.php';
                         </div>
                         <br>
                         <div class="col mb-3">
-                            <button class="btn btn-primary btn-sm" type="submit" id="btnGuardar"><i
-                                        class="fa fa-save"></i>
-                                Guardar
+                            <button class="btn btn-primary btn-sm"
+                                    type="submit"
+                                    id="btnGuardar"><i class="fa fa-save"></i> Guardar
                             </button>
-
-                            <button class="btn btn-danger btn-sm" onclick="cancelarFormulario()" type="button"><i
-                                        class="fa fa-arrow-circle-left"></i> Cancelar
+                            <button class="btn btn-danger btn-sm"
+                                    onclick="cancelarFormulario()"
+                                    type="button"><i class="fa fa-arrow-circle-left"></i> Cancelar
                             </button>
                         </div>
                     </form>

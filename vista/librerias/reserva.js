@@ -121,7 +121,6 @@ function insertar(e) {
             mostrarFormulario(false);
             listar();
         }
-
     });
     limpiar();
 }
@@ -222,8 +221,10 @@ function anular(idreserva) {
                                 className: 'btn-primary'
                             }
                         },
+                        callback: function () {
+                            tabla.ajax.reload();
+                        }
                     });
-                    tabla.ajax.reload();
                 });
             }
         }
@@ -274,6 +275,7 @@ function formato_imputs() {
             }
         });
 
+        // EXTRACCIÓN DE FECHAS
         $('input[name="fechas"]').on('apply.daterangepicker', function (ev, picker) {
             f_inicio = picker.startDate.format('YYYY/MM/DD');
             f_fin = picker.endDate.format('YYYY/MM/DD');
@@ -287,15 +289,17 @@ function formato_imputs() {
             $(this).val('');
         });
 
-        $( "#nombre" ).click(function() {
+        // ACTIVAR EL MODAL HACIENDO CLICK EN EL INPUT NOMBRE
+        $("#nombre").click(function () {
             $('#myModal').modal({
-                show:true,
-                backdrop:'static'
+                show: true,
+                backdrop: 'static'
             });
         });
     });
 
-    $("#idhabitacion, #idhuesped").selectpicker({
+    // TRADUCIR A ESPAÑOL EL SELECT
+    $("#idhabitacion").selectpicker({
         noneSelectedText: 'Seleccionar una opción',
         noneResultsText: 'No exite resultados'
     });
