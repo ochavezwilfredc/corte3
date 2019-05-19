@@ -56,9 +56,9 @@ switch ($_GET["opc"]) {
                 "6" => $res["comentario"],
                 "7" => ($res["estado"] == "1") ? '<span class="badge badge-success">Activa</span>' :
                     '<span class="badge badge-danger">Anulada</span>',
-                "8" => ($res["estado"] == '1') ? '<button class="btn btn-sm text-dark" onclick="mostrar(' . $res["idreserva"] . ')"><i class="fas fa-eye"></i></button>' .
+                "8" => ($res["estado"] == '1') ? '<button class="btn btn-sm text-primary" onclick="mostrar(' . $res["idreserva"] . ')"><i class="fas fa-eye"></i></button>' .
                     ' <button class="btn btn-sm text-danger" onclick="anular(' . $res["idreserva"] . ')"><i class="fas fa-window-close"></i></button>' :
-                    '<button class="btn btn-sm text-dark" onclick="mostrar(' . $res["idreserva"] . ')"><i class="fas fa-eye"></i></button>',
+                    '<button class="btn btn-sm text-primary" onclick="mostrar(' . $res["idreserva"] . ')"><i class="fas fa-eye"></i></button>',
             );
         }
         $results = array(

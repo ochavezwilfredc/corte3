@@ -2,7 +2,7 @@
 <br><br>
 <!-- Footer -->
 <footer class="page-footer font-small stylish-color-dark pt-4 titulo">
-<!--    <hr>-->
+    <!--    <hr>-->
     <!-- Social buttons -->
     <ul class="list-unstyled list-inline text-center">
         <li class="list-inline-item">
@@ -17,7 +17,8 @@
 
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© 2019 Copyright:
-        <a href="http://www.unilibrecali.edu.co/"> Universidad Libre Seccional Cali</a>
+        <a href="http://www.unilibrecali.edu.co/"> Universidad Libre Seccional Cali</a><br>
+        <p class="text-dark">Alumno:<a href="https://www.facebook.com/crist7wc"> Wilfredo Cristóbal Olano Chávez</a></p>
     </div>
     <!-- Copyright -->
 
