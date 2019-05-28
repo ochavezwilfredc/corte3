@@ -2,7 +2,6 @@
 require 'header.php';
 ?>
 <!-- Inicio contenido-->
-
 <div class="container small">
     <div class="row card-deck mb-12" id="listadoregistros">
         <div class="card mb-12">

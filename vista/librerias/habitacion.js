@@ -1,6 +1,6 @@
 var tabla;
 
-//Función que se ejecuta al inicio
+//Función que se ejecuta al inicio de la aplicación
 function init() {
     mostrarFormulario(false);
     listar();
@@ -150,4 +150,5 @@ function eliminar(idhabitacion) {
     });
 }
 
+// Una vez que se cargan todos los métodos se ejecuta la función init()
 init();
